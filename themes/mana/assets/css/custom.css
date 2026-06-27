@@ -427,6 +427,21 @@ select.form-input {
   border-color: rgba(37, 211, 102, 0.25);
 }
 
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.contact-link:hover {
+  background: rgba(37, 211, 102, 0.14);
+  border-color: rgba(37, 211, 102, 0.35);
+}
+
+.contact-number {
+  white-space: nowrap;
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .contact-grid {
