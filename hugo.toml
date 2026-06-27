@@ -16,11 +16,6 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 # ═══════════ Navigation ═══════════
 # Rendered by partials/header.html via Hugo's menu system
 [[menus.main]]
-  name = "Services"
-  url = "#services"
-  weight = 10
-
-[[menus.main]]
   name = "Pricing"
   url = "#pricing"
   weight = 20
