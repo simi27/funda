@@ -106,7 +106,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
   [[params.faq]]
     question = "Do you build websites?"
-    answer = "Yes — fundaWEB. We build fast, secure websites on Netlify. Perfect for small businesses who want a professional online presence without WordPress headaches."
+    answer = "Yes — fundaWEB. We build fast, secure websites. Perfect for small businesses who want a professional online presence without WordPress headaches."
 
   [[params.faq]]
     question = "How is funda different?"
@@ -156,7 +156,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 [[params.servicePricing]]
   code = "WEB"
   name = "fundaWEB"
-  description = "Modern websites built on Netlify — fast, secure, professional."
+  description = "Modern websites — fast, secure, professional."
 
   [[params.servicePricing.tiers]]
     name = "Landing Page"
@@ -170,13 +170,13 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
       text = "Custom design & development"
       highlight = true
     [[params.servicePricing.tiers.features]]
+      text = "Fast & secure hosting"
+    [[params.servicePricing.tiers.features]]
       text = "Mobile responsive"
     [[params.servicePricing.tiers.features]]
       text = "Contact form"
     [[params.servicePricing.tiers.features]]
       text = "Free SSL certificate"
-    [[params.servicePricing.tiers.features]]
-      text = "Hosted on Netlify"
 
   [[params.servicePricing.tiers]]
     name = "Business Site"
@@ -194,11 +194,11 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
     [[params.servicePricing.tiers.features]]
       text = "Mobile responsive"
     [[params.servicePricing.tiers.features]]
+      text = "Fast & secure hosting"
+    [[params.servicePricing.tiers.features]]
       text = "Contact form"
     [[params.servicePricing.tiers.features]]
       text = "Free SSL certificate"
-    [[params.servicePricing.tiers.features]]
-      text = "Hosted on Netlify"
 
   [[params.servicePricing.tiers]]
     name = "Custom"
