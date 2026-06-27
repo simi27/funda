@@ -20,11 +20,6 @@
 
   <a href="{{ site.Params.heroCtaUrl }}" class="hero-cta">{{ site.Params.heroCtaText }}</a>
 
-  <div class="legend" id="legend">
-    {{ range $i, $word := site.Params.heroCycles }}
-    <div class="legend-item{{ if eq $i 0 }} active{{ end }}">{{ $word }}</div>
-    {{ end }}
-  </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -35,11 +30,8 @@
 {{ end }}
 
 <!-- ═══════════════════════════════════════════════════════════
-     SERVICE RAIL + CARDS — synced to hero rotator via applyState()
+     SERVICE CARDS — synced to hero rotator via applyState()
      ═══════════════════════════════════════════════════════════ -->
-<div id="services">
-  {{ partial "service-rail.html" . }}
-</div>
 {{ partial "service-cards.html" . }}
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -115,14 +107,12 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 </script>
 
-<!-- Hero rotator — applyState() drives legend, rail, cards -->
+<!-- Hero rotator — applyState() drives cards -->
 <script>
   const cycle = [{{ range $i, $w := site.Params.heroCycles }}{{ if $i }},{{ end }}"{{ $w }}"{{ end }}];
   const suffixWindow = document.getElementById('suffixWindow');
   const suffixText = document.getElementById('suffixText');
-  const railEl = document.getElementById('rail');
   const cardsEl = document.getElementById('cards');
-  const legendItems = document.querySelectorAll('.legend-item');
   let idx = 0;
 
   function setWidth(word) {
@@ -131,14 +121,6 @@
   setWidth(cycle[idx]);
 
   function applyState(word) {
-    legendItems.forEach((el, i) => el.classList.toggle('active', i === idx));
-    if (railEl) {
-      railEl.querySelectorAll('.rail-item').forEach(el => {
-        const active = el.dataset.word === word;
-        el.classList.toggle('active', active);
-        el.querySelector('.rail-bullet').textContent = active ? '◉' : '○';
-      });
-    }
     if (cardsEl) {
       cardsEl.querySelectorAll('.card').forEach(el => {
         el.classList.toggle('active', el.dataset.word === word);
