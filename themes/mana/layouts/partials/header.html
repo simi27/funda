@@ -1,6 +1,5 @@
 <!-- Header — Hugo menu-driven nav -->
-<nav class="header-nav" role="navigation" aria-label="Main navigation">
-  <a href="{{ "/" | relLangURL }}" class="nav-mark" aria-label="{{ site.Title }} Home">F U N D A</a>
+<nav class="header-nav header-nav--center" role="navigation" aria-label="Main navigation">
   <div class="header-menu">
     {{ range site.Menus.main }}
     <a href="{{ .URL }}" class="menu-link">{{ .Name }}</a>

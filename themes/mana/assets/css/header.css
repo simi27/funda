@@ -23,6 +23,10 @@
   padding: var(--s2) 0;
 }
 
+.header-nav--center {
+  justify-content: center;
+}
+
 .nav-mark {
   font-weight: 700;
   font-size: 15px;
