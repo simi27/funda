@@ -58,7 +58,67 @@
   line-height: 1.6;
 }
 
-/* ── Pricing — three-column ── */
+/* ── Pricing Tabs ── */
+.pricing-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--s1);
+  margin-bottom: var(--s4);
+  flex-wrap: wrap;
+}
+
+.pricing-tab {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: var(--s1) var(--s3);
+  border: 1px solid var(--hair);
+  border-radius: var(--r1);
+  background: var(--bg-secondary);
+  color: var(--mute);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-standard);
+}
+
+.pricing-tab .pfx {
+  font-weight: 500;
+}
+
+.pricing-tab:hover {
+  border-color: var(--forest);
+  color: var(--forest);
+}
+
+.pricing-tab.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.pricing-tab.active .pfx {
+  color: var(--paper);
+  opacity: 0.7;
+}
+
+.pricing-panel {
+  display: none;
+}
+
+.pricing-panel.active {
+  display: block;
+}
+
+.pricing-desc {
+  text-align: center;
+  font-size: 14px;
+  color: var(--mute);
+  margin-bottom: var(--s4);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
