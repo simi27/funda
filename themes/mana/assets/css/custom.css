@@ -150,6 +150,23 @@
   font-weight: 700;
   font-size: 15px;
   color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pricing-service {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.pricing-service .pfx {
+  font-weight: 500;
+}
+
+.pricing-tier {
+  font-size: 15px;
+  color: var(--ink);
 }
 
 .pricing-name .pfx {

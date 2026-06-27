@@ -52,7 +52,7 @@
     <p class="pricing-desc">{{ $svc.description }}</p>
     <div class="pricing-grid">
       {{ range $svc.tiers }}
-      {{ partial "pricing-card.html" . }}
+      {{ partial "pricing-card.html" (merge . (dict "service" $svc.code)) }}
       {{ end }}
     </div>
   </div>
