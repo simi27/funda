@@ -17,7 +17,7 @@
 
   /* ── Surfaces ── */
   --bg-primary:    var(--paper);
-  --bg-secondary:  #FFFFFF;
+  --bg-secondary:  transparent;
   --bg-tertiary:   var(--mist);
   --text-primary:  var(--ink);
   --text-secondary:#5A5566;

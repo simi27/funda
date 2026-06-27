@@ -97,8 +97,11 @@
   transition: background var(--dur-fast) var(--ease-standard);
 }
 
-.hero-cta:hover {
+.hero-cta:hover,
+.hero-cta:focus-visible {
   background: var(--forest-deep);
+  outline: 2px solid var(--forest);
+  outline-offset: 3px;
 }
 
 /* ── Legend dots ── */

@@ -171,14 +171,23 @@
   background: var(--accent-rgba-01);
 }
 
+.pricing-cta:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+  border-color: var(--forest);
+}
+
 .pricing-card.featured .pricing-cta {
   background: var(--ink);
   color: var(--paper);
   border-color: var(--ink);
 }
 
-.pricing-card.featured .pricing-cta:hover {
+.pricing-card.featured .pricing-cta:hover,
+.pricing-card.featured .pricing-cta:focus-visible {
   background: var(--forest-deep);
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
 }
 
 /* ── FAQ ── */
@@ -214,6 +223,13 @@
   justify-content: space-between;
   align-items: center;
   color: var(--ink);
+  cursor: pointer;
+}
+
+.faq-section details summary:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+  border-radius: 3px;
 }
 
 .faq-section details summary::after {
