@@ -33,24 +33,6 @@
 {{ partial "service-cards.html" . }}
 
 <!-- ═══════════════════════════════════════════════════════════
-     WHY FUNDA
-     ═══════════════════════════════════════════════════════════ -->
-<section class="section">
-  <h2 class="section-heading">Why {{ site.Title }}</h2>
-  <p class="section-subheading">{{ site.Params.whyLabel }}</p>
-
-  <div class="why-grid">
-    {{ range site.Params.why }}
-    <div class="why-card">
-      <div class="why-card-icon">{{ .icon }}</div>
-      <h4>{{ .title }}</h4>
-      <p>{{ .description }}</p>
-    </div>
-    {{ end }}
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
      PRICING
      ═══════════════════════════════════════════════════════════ -->
 <section class="section" id="pricing">
