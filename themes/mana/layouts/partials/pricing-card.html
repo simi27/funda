@@ -1,6 +1,6 @@
 <!-- Pricing Card partial — accepts a single tier dict -->
 {{ $tier := . }}
-<div class="pricing-card{{ if $tier.featured }} featured{{ end }}">
+<div class="pricing-card{{ if $tier.featured }} featured{{ end }}{{ if $tier.fullWidth }} pricing-card--full{{ end }}">
   <div class="pricing-name"><span class="pfx">funda</span>{{ $tier.product | default (printf "MAIL %s" $tier.name) }}</div>
   <div class="pricing-amount">{{ $tier.price }}<small>{{ $tier.period }}</small></div>
   <div class="pricing-period">{{ $tier.sub }}</div>

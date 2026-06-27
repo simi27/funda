@@ -297,6 +297,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
     featured = false
     ctaUrl = "#contact"
     ctaText = "Add Mailbox"
+    fullWidth = true
     [[params.servicePricing.tiers.features]]
       text = "1 additional email account"
       highlight = true

@@ -250,6 +250,50 @@
   outline-offset: 2px;
 }
 
+/* ── Full-width add-on card ── */
+.pricing-card--full {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+}
+.pricing-card--full .pricing-name {
+  flex-shrink: 0;
+  font-size: 13px;
+}
+.pricing-card--full .pricing-amount {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.pricing-card--full .pricing-period {
+  flex: 1;
+}
+.pricing-card--full .pricing-divider {
+  display: none;
+}
+.pricing-card--full .pricing-features {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  margin-bottom: 0;
+  flex: 2;
+}
+.pricing-card--full .pricing-cta {
+  width: auto;
+  flex-shrink: 0;
+  padding: var(--s1) var(--s3);
+}
+@media (max-width: 768px) {
+  .pricing-card--full {
+    flex-direction: column;
+    text-align: center;
+  }
+  .pricing-card--full .pricing-features {
+    flex-direction: column;
+  }
+}
+
 /* ── FAQ ── */
 .faq-section {
   max-width: 700px;
