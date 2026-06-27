@@ -262,3 +262,136 @@
   display: inline-block;
   margin-top: var(--s3);
 }
+
+/* ── Contact Form + Info ── */
+.contact-section {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: var(--s7) var(--s4);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s6);
+  margin-top: var(--s4);
+}
+
+/* ── Form ── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--hair);
+  border-radius: var(--r1);
+  padding: var(--s2) var(--s3);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  transition: border-color var(--dur-fast) var(--ease-standard);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--mute);
+}
+
+.form-input:focus {
+  border-color: var(--forest);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239B9586' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--s2) center;
+  padding-right: var(--s5);
+  cursor: pointer;
+}
+
+.form-submit {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  padding: var(--s2) var(--s4);
+  border-radius: var(--r1);
+  border: none;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-standard);
+  width: 100%;
+}
+
+.form-submit:hover {
+  background: var(--forest-deep);
+}
+
+/* ── Contact Info ── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  justify-content: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r1);
+  background: var(--bg-secondary);
+  border: 1px solid var(--hair);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--forest);
+}
+
+.contact-item h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: var(--ink);
+}
+
+.contact-item a,
+.contact-item p {
+  font-size: 14px;
+  color: var(--mute);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+
+.contact-item a:hover {
+  color: var(--forest);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s4);
+  }
+}

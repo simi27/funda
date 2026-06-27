@@ -60,10 +60,13 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   whyLabel = "The fundamentals, done properly"
   faqLabel = "The fundamentals — explained"
 
-  # CTA
-  ctaHeading = "Ready to get online?"
-  ctaSubheading = "We'll have you set up within 24 hours."
+  # CTA / Contact
+  ctaHeading = "Let's Build Together"
+  ctaSubheading = "Ready to get online? Fill out the form and we'll have you set up within 24 hours."
   ctaEmail = "hello@funda.africa"
+  ctaPhone = "+27 64 951 3749"
+  ctaWhatsApp = "27649513749"
+  ctaLocation = "Durban, South Africa"
   ctaMailtoSubject = "Let's get started"
 
   # Why funda cards
