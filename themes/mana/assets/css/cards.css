@@ -35,6 +35,19 @@
   transition: background var(--dur-normal) var(--ease-standard);
 }
 
+.card-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-bottom: var(--s1);
+  opacity: 0.85;
+  transition: opacity var(--dur-normal) var(--ease-standard);
+}
+
+.card.active .card-icon {
+  opacity: 1;
+}
+
 .card-name {
   font-family: var(--font-mono);
   font-weight: 700;
