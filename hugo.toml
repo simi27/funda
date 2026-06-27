@@ -51,7 +51,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
   # Ticker — ambient marquee, pure CSS animation
   tickerAnchor = "THE FUNDAMENTALS"
-  tickerHeroEnabled = false
+  tickerHeroEnabled = true
   tickerStripEnabled = true
 
   # Section labels (JetBrains Mono metadata text)
