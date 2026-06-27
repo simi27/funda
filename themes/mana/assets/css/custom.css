@@ -414,6 +414,16 @@ select.form-input {
   margin-bottom: var(--s1);
 }
 
+.flag-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
 /* ── WhatsApp highlight ── */
 .contact-whatsapp {
   background: rgba(37, 211, 102, 0.08);
