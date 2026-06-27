@@ -1,12 +1,222 @@
+# ══════════════════════════════════════════════
+# funda — Hugo Configuration
+# Every value below drives a component on the page.
+# Change data here, not in templates.
+# ══════════════════════════════════════════════
+
 baseURL = 'https://funda.africa/'
 languageCode = 'en'
-title = 'FUNDA'
+title = 'funda'
 theme = 'mana'
 disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
 [outputs]
   home = ['HTML']
 
+# ═══════════ Navigation ═══════════
+# Rendered by partials/header.html via Hugo's menu system
+[[menus.main]]
+  name = "Services"
+  url = "#services"
+  weight = 10
+
+[[menus.main]]
+  name = "Pricing"
+  url = "#pricing"
+  weight = 20
+
+[[menus.main]]
+  name = "FAQ"
+  url = "#faq"
+  weight = 30
+
+[[menus.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 40
+
+# ═══════════ Params — drives all page content ═══════════
+
 [params]
-  description = 'Professional email hosting, domains, and websites for South African small businesses. The fundamentals — done right.'
-  author = 'FUNDA'
+  description = "Building the digital fundamentals for Africa. Professional email, domains, websites, and hosting — done properly."
+  author = "funda"
+
+  # Hero
+  heroTagline = "Everything starts with the fundamentals."
+  heroPills = "Websites · Email · Domains · Hosting"
+  heroCtaText = "Get Started"
+  heroCtaUrl = "#contact"
+  heroCycles = ["MENTALS", "WEB", "MAIL", "DOMAIN", "HOSTING"]
+  heroRotateInterval = 2600   # ms between rotations (0 to disable)
+
+  # Ticker — ambient marquee, pure CSS animation
+  tickerAnchor = "THE FUNDAMENTALS"
+  tickerHeroEnabled = true
+  tickerStripEnabled = true
+
+  # Section labels (JetBrains Mono metadata text)
+  railLabel = "Services"
+  pricingLabel = "Email Hosting — month to month, cancel anytime"
+  whyLabel = "The fundamentals, done properly"
+  faqLabel = "The fundamentals — explained"
+
+  # Why funda cards
+  [[params.why]]
+    icon = "⚡"
+    title = "Fast Setup"
+    description = "Your email and site are live within 24 hours. No tech skills needed."
+
+  [[params.why]]
+    icon = "🔒"
+    title = "Secure by Default"
+    description = "Spam filters, virus scanning, and managed SSL on every account."
+
+  [[params.why]]
+    icon = "📱"
+    title = "Any Device"
+    description = "Access your email on your phone, laptop, or via webmail — anywhere."
+
+  [[params.why]]
+    icon = "🇿🇦"
+    title = "South African Support"
+    description = "Local support when you need it. No chatbots, just real people."
+
+  # FAQ
+  [[params.faq]]
+    question = "What exactly do I get?"
+    answer = "A professional email address at your own domain (e.g. you@yourcompany.co.za). Webmail access, spam & virus protection, and the ability to send/receive from any device. Plus free SSL and DNS management."
+
+  [[params.faq]]
+    question = "Can I use my own domain?"
+    answer = "Absolutely. You can bring any domain you own, or we'll register one for you. We'll point it to our mail servers — free of charge."
+
+  [[params.faq]]
+    question = "Is there a contract?"
+    answer = "Nope. Month-to-month, cancel anytime. No long-term lock-in."
+
+  [[params.faq]]
+    question = "Can I check email on my phone?"
+    answer = "Yes. Webmail works in any browser, or set up your email in the Gmail app, Apple Mail, Outlook — anything that supports IMAP."
+
+  [[params.faq]]
+    question = "Do you build websites?"
+    answer = "Yes — fundaWEB. We build fast, secure websites on Netlify. Perfect for small businesses who want a professional online presence without WordPress headaches."
+
+  [[params.faq]]
+    question = "How is funda different?"
+    answer = "We focus on the fundamentals — done properly. Professional email at your domain, transparent pricing, no upsells, and local support. We keep it simple so you can get on with business."
+
+  # CTA
+  ctaHeading = "Ready to get online?"
+  ctaSubheading = "We'll have you set up within 24 hours."
+  ctaEmail = "hello@funda.africa"
+  ctaMailtoSubject = "Let's get started"
+
+  # Social / contact
+  [params.social]
+    email = "hello@funda.africa"
+
+  # Copyright
+  [params.copyright]
+    startYear = 2025
+    owner = "funda"
+
+  # Footer
+  footerText = "Everything starts with the fundamentals."
+  footerLocation = "South Africa 🇿🇦"
+
+# ═══════════ Services — drives hero rotator, rail, cards ═══════════
+# These are the LIVE services. Add new ones only when they actually ship.
+# Each service gets: a short code (suffix), display name, and description.
+
+[[params.services]]
+  code = "WEB"
+  name = "fundaWEB"
+  description = "Websites"
+
+[[params.services]]
+  code = "MAIL"
+  name = "fundaMAIL"
+  description = "Professional Email"
+
+[[params.services]]
+  code = "DOMAIN"
+  name = "fundaDOMAIN"
+  description = "Your Online Identity"
+
+[[params.services]]
+  code = "HOSTING"
+  name = "fundaHOSTING"
+  description = "Fast & Secure Hosting"
+
+# ═══════════ Pricing Tiers ═══════════
+# Each tier: name, price, period, featured flag, features list, cta
+
+[[params.pricing]]
+  name = "Bronze"
+  product = "fundaMAIL Bronze"
+  price = "R79"
+  period = "/mo"
+  sub = "No contract. Cancel anytime."
+  featured = false
+  ctaUrl = "#contact"
+  ctaText = "Get Started"
+  [[params.pricing.features]]
+    text = "2 email accounts"
+    highlight = true
+  [[params.pricing.features]]
+    text = "500 MB storage"
+  [[params.pricing.features]]
+    text = "1 GB bandwidth"
+  [[params.pricing.features]]
+    text = "Spam & virus protection"
+  [[params.pricing.features]]
+    text = "Webmail + mobile/desktop"
+  [[params.pricing.features]]
+    text = "Free SSL certificate"
+
+[[params.pricing]]
+  name = "Silver"
+  product = "fundaMAIL Silver"
+  price = "R149"
+  period = "/mo"
+  sub = "Most popular · No contract"
+  featured = true
+  ctaUrl = "#contact"
+  ctaText = "Get Started"
+  [[params.pricing.features]]
+    text = "5 email accounts"
+    highlight = true
+  [[params.pricing.features]]
+    text = "1 GB storage"
+  [[params.pricing.features]]
+    text = "2 GB bandwidth"
+  [[params.pricing.features]]
+    text = "Spam & virus protection"
+  [[params.pricing.features]]
+    text = "Webmail + mobile/desktop"
+  [[params.pricing.features]]
+    text = "Free SSL certificate"
+
+[[params.pricing]]
+  name = "Gold"
+  product = "fundaMAIL Gold"
+  price = "R249"
+  period = "/mo"
+  sub = "No contract. Cancel anytime."
+  featured = false
+  ctaUrl = "#contact"
+  ctaText = "Get Started"
+  [[params.pricing.features]]
+    text = "Unlimited email accounts"
+    highlight = true
+  [[params.pricing.features]]
+    text = "2 GB storage"
+  [[params.pricing.features]]
+    text = "5 GB bandwidth"
+  [[params.pricing.features]]
+    text = "Spam & virus protection"
+  [[params.pricing.features]]
+    text = "Webmail + mobile/desktop"
+  [[params.pricing.features]]
+    text = "Free SSL certificate"

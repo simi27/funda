@@ -1,0 +1,34 @@
+<!-- Ticker partial — accepts .scale ("hero" | "strip") -->
+{{ $scale := .scale | default "hero" }}
+{{ $anchor := site.Params.tickerAnchor | default "THE FUNDAMENTALS" }}
+{{ $services := site.Params.services }}
+
+<div class="marquee ticker--{{ $scale }}" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-item">
+        <span class="marquee-anchor">{{ $anchor }}</span>
+      </span>
+      <span class="marquee-arrow"> → </span>
+      {{ range $services }}
+      <span class="marquee-item">
+        <span class="marquee-prefix">funda</span><span class="marquee-suffix">{{ .code }}</span>
+      </span>
+      <span class="marquee-arrow"> → </span>
+      {{ end }}
+    </div>
+    <div class="marquee-group">
+      <span class="marquee-item">
+        <span class="marquee-anchor">{{ $anchor }}</span>
+      </span>
+      <span class="marquee-arrow"> → </span>
+      {{ range $services }}
+      <span class="marquee-item">
+        <span class="marquee-prefix">funda</span><span class="marquee-suffix">{{ .code }}</span>
+      </span>
+      <span class="marquee-arrow"> → </span>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<span class="sr-only">{{ $anchor }}{{ range $services }}: funda{{ .code }}{{ end }}.</span>

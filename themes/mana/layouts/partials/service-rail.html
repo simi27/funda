@@ -1,0 +1,13 @@
+<!-- Service Rail partial — vertical dot list, one active at a time -->
+{{ $services := site.Params.services }}
+
+<div class="section-label">{{ site.Params.railLabel | default "Services" }}</div>
+<div class="rail" id="rail">
+  {{ range $services }}
+  <div class="rail-item" data-word="{{ .code }}">
+    <span class="rail-bullet">○</span>
+    <span class="rail-name"><span class="pfx">funda</span>{{ .code }}</span>
+    <span class="rail-desc">{{ .description }}</span>
+  </div>
+  {{ end }}
+</div>

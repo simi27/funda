@@ -1,9 +1,9 @@
+<!-- Header — Hugo menu-driven nav -->
 <nav class="header-nav" role="navigation" aria-label="Main navigation">
-  <a href="{{ "/" | relLangURL }}" class="nav-mark" aria-label="funda Home">F U N D A</a>
+  <a href="{{ "/" | relLangURL }}" class="nav-mark" aria-label="{{ site.Title }} Home">F U N D A</a>
   <div class="header-menu">
-    <a href="#services" class="menu-link">Services</a>
-    <a href="#pricing" class="menu-link">Pricing</a>
-    <a href="#faq" class="menu-link">FAQ</a>
-    <a href="#contact" class="menu-link">Contact</a>
+    {{ range site.Menus.main }}
+    <a href="{{ .URL }}" class="menu-link">{{ .Name }}</a>
+    {{ end }}
   </div>
 </nav>

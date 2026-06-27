@@ -1,0 +1,14 @@
+<!-- Service Cards partial — grid, subtle lift on active -->
+{{ $services := site.Params.services }}
+
+<div class="cards-section">
+  <div class="cards-grid" id="cards">
+    {{ range $services }}
+    <div class="card" data-word="{{ .code }}">
+      <span class="card-dot"></span>
+      <span class="card-name"><span class="pfx">funda</span>{{ .code }}</span>
+      <span class="card-desc">{{ .description }}</span>
+    </div>
+    {{ end }}
+  </div>
+</div>
