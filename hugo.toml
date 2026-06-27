@@ -1,0 +1,12 @@
+baseURL = 'https://funda.africa/'
+languageCode = 'en'
+title = 'FUNDA'
+theme = 'mana'
+disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
+
+[outputs]
+  home = ['HTML']
+
+[params]
+  description = 'Professional email hosting, domains, and websites for South African small businesses. The fundamentals — done right.'
+  author = 'FUNDA'

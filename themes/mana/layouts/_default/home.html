@@ -1,0 +1,226 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="funda-hero">
+  <div class="funda-pill">✦ The fundamentals of your online presence</div>
+
+  <div class="funda-hero-logo">
+    <span class="hero-box">F</span>
+    <span class="hero-box">U</span>
+    <span class="hero-box">N</span>
+    <span class="hero-box">D</span>
+    <span class="hero-box">A</span>
+  </div>
+
+  <h1>Your domain.<br><span>Your email. Your brand.</span></h1>
+
+  <p class="tagline">The fundamentals — done right.</p>
+  <p class="sub">
+    We give your business the essential building blocks to get online.<br>
+    Professional email at your own domain. No fluff. No hidden costs.
+  </p>
+</section>
+
+<!-- Manifesto -->
+<div class="funda-manifesto">
+  <p>
+    <strong>FUNDA</strong> is what you need to <strong>get moving</strong>.
+    High-quality email hosting, domains, and websites — built for
+    <strong>speed, reliability, and simplicity</strong>.
+    We keep the fundamentals strong so you can focus on what matters:
+    <strong>growing your business</strong>.
+    <br><br>
+    <span style="color: var(--accent-primary); font-weight: 600;">
+      ⚡ Because getting online shouldn't be complicated.
+    </span>
+  </p>
+</div>
+
+<!-- Billing Toggle -->
+<div class="billing-toggle" id="billingToggleContainer">
+  <span class="active" id="label-monthly">Monthly</span>
+  <div class="toggle-track" id="billingToggle" onclick="toggleBilling()"></div>
+  <span id="label-yearly">Yearly <span class="badge-save">Save ~15%</span></span>
+</div>
+
+<!-- Pricing -->
+<div class="pricing-grid" id="pricingGrid">
+
+  <!-- Bronze -->
+  <div class="pricing-card">
+    <div class="tier-icon">🥉</div>
+    <div class="tier-name">Bronze</div>
+    <div class="tier-desc">Perfect for getting started. One person, one domain.</div>
+    <div class="price" data-monthly="R79" data-yearly="R799"><span>R79</span><small>/mo</small></div>
+    <div class="price-sub" data-monthly="No contract. Cancel anytime." data-yearly="R799/yr (R67/mo)">No contract. Cancel anytime.</div>
+    <div class="card-divider"></div>
+    <ul class="feature-list">
+      <li><span class="check">✓</span> <strong>2 email accounts</strong> <span class="muted">(you + 1 extra)</span></li>
+      <li><span class="check">✓</span> <strong>500 MB</strong> storage</li>
+      <li><span class="check">✓</span> <strong>1 GB</strong> bandwidth</li>
+      <li><span class="check">✓</span> Spam &amp; virus protection</li>
+      <li><span class="check">✓</span> Webmail + mobile/desktop access</li>
+      <li><span class="check">✓</span> Free SSL certificate</li>
+    </ul>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+
+  <!-- Silver (Popular) -->
+  <div class="pricing-card popular">
+    <div class="popular-badge">⭐ Most Popular</div>
+    <div class="tier-icon">🥈</div>
+    <div class="tier-name">Silver</div>
+    <div class="tier-desc">Built for small teams. More mailboxes, more space.</div>
+    <div class="price" data-monthly="R149" data-yearly="R1,499"><span>R149</span><small>/mo</small></div>
+    <div class="price-sub" data-monthly="No contract. Cancel anytime." data-yearly="R1,499/yr (R125/mo)">No contract. Cancel anytime.</div>
+    <div class="card-divider"></div>
+    <ul class="feature-list">
+      <li><span class="check">✓</span> <strong>5 email accounts</strong> <span class="muted">(you + 4 more)</span></li>
+      <li><span class="check">✓</span> <strong>1 GB</strong> storage</li>
+      <li><span class="check">✓</span> <strong>2 GB</strong> bandwidth</li>
+      <li><span class="check">✓</span> Spam &amp; virus protection</li>
+      <li><span class="check">✓</span> Webmail + mobile/desktop access</li>
+      <li><span class="check">✓</span> Free SSL certificate</li>
+    </ul>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+
+  <!-- Gold -->
+  <div class="pricing-card">
+    <div class="tier-icon">🥇</div>
+    <div class="tier-name">Gold</div>
+    <div class="tier-desc">Unlimited mailboxes for growing businesses and teams.</div>
+    <div class="price" data-monthly="R249" data-yearly="R2,499"><span>R249</span><small>/mo</small></div>
+    <div class="price-sub" data-monthly="No contract. Cancel anytime." data-yearly="R2,499/yr (R208/mo)">No contract. Cancel anytime.</div>
+    <div class="card-divider"></div>
+    <ul class="feature-list">
+      <li><span class="check">✓</span> <strong>Unlimited</strong> email accounts</li>
+      <li><span class="check">✓</span> <strong>2 GB</strong> storage</li>
+      <li><span class="check">✓</span> <strong>5 GB</strong> bandwidth</li>
+      <li><span class="check">✓</span> Spam &amp; virus protection</li>
+      <li><span class="check">✓</span> Webmail + mobile/desktop access</li>
+      <li><span class="check">✓</span> Free SSL certificate</li>
+    </ul>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+
+</div>
+
+<!-- Value Props -->
+<div class="values-grid">
+  <div class="value-card">
+    <div class="emoji">⚡</div>
+    <h4>Fast Setup</h4>
+    <p>Your email is live within 24 hours. No tech skills needed.</p>
+  </div>
+  <div class="value-card">
+    <div class="emoji">🔒</div>
+    <h4>Secure by Default</h4>
+    <p>Spam filters, virus scanning, and free SSL on every account.</p>
+  </div>
+  <div class="value-card">
+    <div class="emoji">📱</div>
+    <h4>Any Device</h4>
+    <p>Access your email on your phone, laptop, or via webmail. Anywhere.</p>
+  </div>
+  <div class="value-card">
+    <div class="emoji">🤝</div>
+    <h4>SA Support</h4>
+    <p>Local support when you need it. No chatbots, just real people.</p>
+  </div>
+</div>
+
+<!-- Add-ons -->
+<section class="addons-section" id="addons">
+  <h2>➕ Everything else you need</h2>
+  <p>Add-ons to complete your online presence — only pay for what you use.</p>
+  <div class="addons-grid">
+    <div class="addon-card">
+      <div><h4>🌐 Domain Registration</h4><p class="addon-desc">Get your own .co.za or .com — registered and managed.</p></div>
+      <div class="addon-price">R199 <small>/yr</small></div>
+    </div>
+    <div class="addon-card">
+      <div><h4>🔒 Managed SSL</h4><p class="addon-desc">Auto-renewing encryption. We handle it so you don't have to.</p></div>
+      <div class="addon-price">R299 <small>/yr</small></div>
+    </div>
+    <div class="addon-card">
+      <div><h4>📬 Extra Mailbox</h4><p class="addon-desc">Add another email account to any plan.</p></div>
+      <div class="addon-price">R29 <small>/mo</small></div>
+    </div>
+    <div class="addon-card">
+      <div><h4>🛠️ Maintenance</h4><p class="addon-desc">Backups, updates, and security monitoring — peace of mind.</p></div>
+      <div class="addon-price">R350 <small>/mo</small></div>
+    </div>
+    <div class="addon-card">
+      <div><h4>🌍 Website</h4><p class="addon-desc">Professional Netlify site — design, build, and hosting included.</p></div>
+      <div class="addon-price">From R4,500</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>Ready to build your online presence?</h2>
+  <p>Drop us a message and we'll have you set up within 24 hours.</p>
+  <a href="mailto:hello@funda.africa?subject=Let's%20get%20started&body=Hi%20FUNDA%2C%0A%0AI'd%20like%20to%20get%20online.%20Here's%20what%20I%20need%3A%0A%0A%F0%9F%93%A6%20Plan%3A%20%E2%96%A1%20Bronze%20%E2%96%A1%20Silver%20%E2%96%A1%20Gold%0A%F0%9F%8C%90%20Domain%3A%20(if%20you%20have%20one)%0A%F0%9F%93%AC%20Mailboxes%20needed%3A%20%0A%0AAny%20questions%3F" class="cta-btn">✉️ hello@funda.africa</a>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <h2>❓ The fundamentals — explained</h2>
+
+  <details>
+    <summary>What exactly do I get?</summary>
+    <p>A professional email address at your own domain (e.g. you@yourcompany.co.za). Webmail access, spam &amp; virus protection, and the ability to send/receive from any device. Plus free SSL and DNS management.</p>
+  </details>
+  <details>
+    <summary>Can I use my own domain?</summary>
+    <p>Absolutely. You can bring any domain you own, or we'll register one for you (R199/yr for .co.za). We'll point it to our mail servers — free of charge.</p>
+  </details>
+  <details>
+    <summary>Is there a contract?</summary>
+    <p>Nope. Month-to-month, cancel anytime. Annual billing saves you about 15% if you want to lock in a lower rate.</p>
+  </details>
+  <details>
+    <summary>Can I check email on my phone?</summary>
+    <p>Yes! Webmail works in any browser, or you can set up your email in the Gmail app, Apple Mail, Outlook — anything that supports IMAP.</p>
+  </details>
+  <details>
+    <summary>Do you build websites too?</summary>
+    <p>We do. We build fast, secure websites on Netlify — perfect for small businesses who want a professional online presence without WordPress headaches. Ask us for a quote.</p>
+  </details>
+  <details>
+    <summary>How is FUNDA different?</summary>
+    <p>We focus on the fundamentals — done properly. Professional email at your domain, transparent pricing, no upsells, and local support. We keep it simple so you can get on with business.</p>
+  </details>
+</section>
+
+<!-- Billing Toggle JS -->
+<script>
+  let yearly = false;
+  function toggleBilling() {
+    yearly = !yearly;
+    const track = document.getElementById('billingToggle');
+    track.classList.toggle('yearly', yearly);
+    const prices = document.querySelectorAll('.price');
+    const subs = document.querySelectorAll('.price-sub');
+    prices.forEach(p => {
+      const span = p.querySelector('span');
+      const small = p.querySelector('small');
+      if (yearly) {
+        span.textContent = p.dataset.yearly;
+        small.textContent = '/yr';
+      } else {
+        span.textContent = p.dataset.monthly;
+        small.textContent = '/mo';
+      }
+    });
+    subs.forEach(s => {
+      s.textContent = yearly ? s.dataset.yearly : s.dataset.monthly;
+    });
+    document.getElementById('label-monthly').classList.toggle('active', !yearly);
+    document.getElementById('label-yearly').classList.toggle('active', yearly);
+  }
+</script>
+
+{{ end }}

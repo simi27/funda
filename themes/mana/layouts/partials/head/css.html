@@ -1,0 +1,8 @@
+{{ $themeCss := resources.Get "css/theme.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $themeCss.RelPermalink }}">
+{{ $cssFiles := slice
+  (resources.Get "css/base.css")
+  (resources.Get "css/custom.css")
+}}
+{{ $bundledCss := $cssFiles | resources.Concat "css/bundle.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $bundledCss.RelPermalink }}">

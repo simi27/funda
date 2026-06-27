@@ -1,0 +1,120 @@
+/* FUNDA Color System — overrides Mana theme defaults */
+:root {
+  /* FUNDA Palette */
+  --bg-deep: #0c0d14;
+  --accent-primary: #6c5ce7;
+  --accent-mid-purple: #7d6ff0;
+  --accent-light-purple: #a99bfa;
+  --accent-secondary: #00cec9;
+
+  /* Glass surfaces */
+  --glass-surface: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-block: rgb(255, 255, 255);
+
+  /* Legacy variables for compatibility */
+  --bg-primary: var(--bg-deep);
+  --bg-secondary: #12141f;
+  --bg-tertiary: #191c2b;
+  --text-primary: #e4e8f5;
+  --text-secondary: #c5c8d6;
+  --text-muted: #838ba8;
+  --accent-hover: #5a4bd4;
+  --border-color: #262a3d;
+
+  /* Accent RGBA for effects */
+  --accent-primary-rgba-03: rgba(108, 92, 231, 0.3);
+  --accent-primary-rgba-05: rgba(108, 92, 231, 0.5);
+  --accent-light-purple-rgba-01: rgba(169, 155, 250, 0.1);
+  --accent-light-purple-rgba-03: rgba(169, 155, 250, 0.3);
+  --accent-mid-purple-rgba-05: rgba(125, 111, 240, 0.05);
+  --accent-mid-purple-rgba-01: rgba(125, 111, 240, 0.1);
+  --accent-mid-purple-rgba-02: rgba(125, 111, 240, 0.2);
+
+  /* Tag / badge */
+  --tag-bg: rgba(108, 92, 231, 0.12);
+  --tag-color: var(--accent-primary);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Typography */
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-logo: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: var(--font-body);
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Liberation Mono", monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Icon sizes */
+  --icon-sm: 1rem;
+  --icon-md: 1.25rem;
+  --icon-lg: 1.5rem;
+
+  /* FUNDA extras */
+  --accent-glow: rgba(108, 92, 231, 0.15);
+  --green: #55efc4;
+  --orange: #fdcb6e;
+  --radius: 18px;
+  --radius-sm: 10px;
+}
+
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: clip;
+  position: relative;
+}
+
+/* Minimal radial glow */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(108, 92, 231, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 206, 201, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
