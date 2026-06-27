@@ -60,6 +60,12 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   whyLabel = "The fundamentals, done properly"
   faqLabel = "The fundamentals — explained"
 
+  # CTA
+  ctaHeading = "Ready to get online?"
+  ctaSubheading = "We'll have you set up within 24 hours."
+  ctaEmail = "hello@funda.africa"
+  ctaMailtoSubject = "Let's get started"
+
   # Why funda cards
   [[params.why]]
     icon = "⚡"
@@ -105,12 +111,6 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.faq]]
     question = "How is funda different?"
     answer = "We focus on the fundamentals — done properly. Professional email at your domain, transparent pricing, no upsells, and local support. We keep it simple so you can get on with business."
-
-  # CTA
-  ctaHeading = "Ready to get online?"
-  ctaSubheading = "We'll have you set up within 24 hours."
-  ctaEmail = "hello@funda.africa"
-  ctaMailtoSubject = "Let's get started"
 
   # Social / contact
   [params.social]
