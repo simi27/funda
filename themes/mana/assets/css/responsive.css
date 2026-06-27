@@ -1,70 +1,18 @@
-/* Responsive — FUNDA breakpoints */
+/* ═══════════ Responsive ═══════════ */
 
 @media (max-width: 768px) {
-  .header-container {
-    padding: 0 var(--spacing-sm);
-  }
-
-  .header-nav {
-    padding: var(--spacing-sm) 0;
-  }
-
-  .hero-section {
-    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
-  }
-
-  .hero-title-line1,
-  .hero-title-line2 {
-    font-size: clamp(2rem, 8vw, 3rem);
-  }
-
-  .hero-logo-box {
-    width: 36px;
-    height: 36px;
-    font-size: 0.85rem;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    padding: 0 var(--spacing-md);
-  }
-
-  .pricing-card {
-    padding: var(--spacing-xl) var(--spacing-lg);
-  }
-
-  .addon-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .values-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  main {
-    padding: 0;
-  }
+  .header-container { padding: 0 var(--s2); }
+  .hero-section { padding: var(--s6) var(--s3) var(--s5); }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  .header-logo .logo-link {
-    font-size: 0.9rem;
-  }
-
-  .logo-box {
-    width: 18px;
-    height: 18px;
-    font-size: 0.4rem;
-  }
-
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-btn {
-    padding: 14px 32px;
-    font-size: 0.95rem;
-  }
+  .cards-grid { grid-template-columns: 1fr; }
+  .wordmark { font-size: clamp(32px, 12vw, 48px); }
+  .hero-section { padding: var(--s5) var(--s2) var(--s4); }
+  .hero-tagline { font-size: 16px; }
+  .header-menu { display: none; }
+  .section-heading { font-size: 1.5rem; }
 }

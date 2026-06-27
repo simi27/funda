@@ -1,0 +1,116 @@
+/* ═══════════ Marquee Ticker — ambient branding, CSS-only ═══════════ */
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+.marquee-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .marquee-group + .marquee-group {
+    display: none;
+  }
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.marquee-arrow {
+  color: var(--forest);
+}
+
+.marquee-anchor {
+  font-weight: 700;
+}
+
+.marquee-prefix {
+  font-weight: 500;
+}
+
+.marquee-suffix {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+/* ── Hero scale — large, sits under headline ── */
+.ticker--hero {
+  background: transparent;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  padding: 18px 0;
+}
+
+.ticker--hero .marquee-item {
+  font-size: clamp(20px, 3.4vw, 32px);
+  margin-right: 0.6em;
+}
+
+.ticker--hero .marquee-arrow {
+  margin-right: 0.6em;
+  font-weight: 500;
+}
+
+.ticker--hero .marquee-anchor {
+  color: var(--ink);
+}
+
+.ticker--hero .marquee-prefix {
+  color: var(--ink);
+}
+
+.ticker--hero .marquee-suffix {
+  color: var(--forest);
+}
+
+/* ── Strip scale — footer/dashboard chrome, small + dense ── */
+.ticker--strip {
+  background: var(--ink);
+  border-radius: var(--r1);
+  padding: 13px 0;
+}
+
+.ticker--strip .marquee-item {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin-right: 0.9em;
+}
+
+.ticker--strip .marquee-arrow {
+  margin-right: 0.9em;
+}
+
+.ticker--strip .marquee-anchor {
+  color: var(--paper);
+  font-family: var(--font-mono);
+}
+
+.ticker--strip .marquee-prefix {
+  color: var(--paper);
+  opacity: 0.55;
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.ticker--strip .marquee-suffix {
+  color: #4FD080;
+}

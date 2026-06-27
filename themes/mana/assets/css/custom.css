@@ -1,527 +1,248 @@
-/* ─── FUNDA Landing Page — Custom Sections ─── */
+/* ═══════════ FUNDA Sections — Why Funda, Pricing, FAQ ═══════════ */
 
-/* ============================================
-   Glass Card Foundation (extends Mana's .card-base)
-   ============================================ */
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
-  max-width: 1100px;
+/* ── Section wrapper ── */
+.section {
+  max-width: 920px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg) var(--spacing-3xl);
-}
-
-/* ─── Pricing Card — Glassmorphism ─── */
-.pricing-card {
-  background: var(--bg-secondary);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  padding: var(--spacing-2xl) var(--spacing-xl);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transition: all var(--transition-base);
-}
-
-.pricing-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent-primary);
-  box-shadow: 0 20px 60px var(--accent-glow);
-}
-
-.pricing-card.popular {
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 0 1px var(--accent-primary), 0 20px 60px var(--accent-glow);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -13px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: #fff;
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 6px 24px;
-  border-radius: 100px;
-  white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(108, 92, 231, 0.3);
-}
-
-/* ─── Tier Header ─── */
-.tier-icon {
-  font-size: 2.4rem;
-  margin-bottom: var(--spacing-sm);
-  line-height: 1;
-}
-
-.tier-name {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  letter-spacing: -0.02em;
-}
-
-.tier-desc {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  margin-bottom: var(--spacing-xl);
-  min-height: 2.6em;
-}
-
-/* ─── Price ─── */
-.price {
-  font-family: var(--font-heading);
-  font-size: 2.8rem;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.price small {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.price-sub {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-bottom: var(--spacing-xl);
-}
-
-/* ─── Divider ─── */
-.card-divider {
-  height: 1px;
-  background: var(--border-color);
-  margin: var(--spacing-lg) 0;
-}
-
-/* ─── Feature List ─── */
-.feature-list {
-  list-style: none;
-  flex: 1;
-  margin-bottom: var(--spacing-xl);
-}
-
-.feature-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.88rem;
-  padding: 6px 0;
-  color: var(--text-secondary);
-}
-
-.feature-list li .check {
-  color: var(--green);
-  flex-shrink: 0;
-  margin-top: 1px;
-  font-weight: 700;
-}
-
-.feature-list li strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.feature-list li .muted {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
-
-/* ─── CTA Button ─── */
-.pricing-card .btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 14px;
-  border-radius: 0.625rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  background: transparent;
-  color: var(--accent-primary);
-  border: 1px solid var(--border-color);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  text-decoration: none;
-  font-family: var(--font-body);
-}
-
-.pricing-card .btn:hover {
-  background: var(--accent-mid-purple-rgba-01);
-  border-color: var(--accent-primary);
-}
-
-.pricing-card.popular .btn {
-  background: var(--accent-primary);
-  color: #fff;
-  border-color: var(--accent-primary);
-  font-weight: 700;
-}
-
-.pricing-card.popular .btn:hover {
-  background: var(--accent-hover);
-  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.3);
-}
-
-/* ============================================
-   Manifesto
-   ============================================ */
-
-.manifesto {
-  max-width: 680px;
-  margin: 0 auto var(--spacing-2xl);
-  padding: 0 var(--spacing-lg);
-  text-align: center;
-}
-
-.manifesto p {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.8;
-}
-
-.manifesto strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.manifesto .highlight {
-  color: var(--accent-primary);
-  font-weight: 600;
-}
-
-/* ============================================
-   Billing Toggle
-   ============================================ */
-
-.billing-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: var(--spacing-2xl);
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-family: var(--font-body);
-}
-
-.billing-toggle .active {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.toggle-track {
-  position: relative;
-  width: 52px;
-  height: 28px;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.toggle-track:hover {
-  border-color: var(--accent-primary);
-}
-
-.toggle-track::after {
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  background: var(--accent-primary);
-  border-radius: 50%;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.toggle-track.yearly::after {
-  left: 27px;
-}
-
-.badge-save {
-  background: var(--green);
-  color: #06080f;
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 2px 10px;
-  border-radius: 100px;
-  margin-left: 4px;
-  font-family: var(--font-body);
-}
-
-/* ============================================
-   Value Props — Glass cards
-   ============================================ */
-
-.values-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg) var(--spacing-2xl);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--spacing-lg);
-}
-
-.value-card {
-  background: var(--bg-secondary);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
-  padding: var(--spacing-xl) var(--spacing-lg);
-  text-align: center;
-  transition: all var(--transition-base);
-}
-
-.value-card:hover {
-  border-color: var(--accent-primary);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px var(--accent-glow);
-}
-
-.value-card .emoji {
-  font-size: 2.2rem;
-  margin-bottom: var(--spacing-md);
-  display: block;
-}
-
-.value-card h4 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: -0.01em;
-}
-
-.value-card p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ============================================
-   Add-ons Section
-   ============================================ */
-
-.addons-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg) var(--spacing-2xl);
+  padding: var(--s7) var(--s4);
 }
 
 .section-heading {
-  text-align: center;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: var(--spacing-sm);
+  font-size: clamp(24px, 3vw, 32px);
   letter-spacing: -0.02em;
+  margin-bottom: var(--s1);
+  color: var(--ink);
 }
 
 .section-subheading {
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-bottom: var(--spacing-2xl);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--mute);
+  text-transform: uppercase;
+  margin-bottom: var(--s4);
 }
 
-.addons-grid {
+/* ── Why Funda — 2×2 grid ── */
+.why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s4);
 }
 
-.addon-card {
+.why-card {
+  border: 1px solid var(--hair);
+  border-radius: var(--r1);
+  padding: var(--s4) var(--s3);
   background: var(--bg-secondary);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: 0.625rem;
-  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.why-card-icon {
+  font-size: 24px;
+  margin-bottom: var(--s2);
+  color: var(--forest);
+}
+
+.why-card h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: var(--s1);
+}
+
+.why-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Pricing — three-column ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s3);
+}
+
+.pricing-card {
+  border: 1px solid var(--hair);
+  border-radius: var(--r1);
+  padding: var(--s4);
+  background: var(--bg-secondary);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--spacing-md);
-  transition: all var(--transition-base);
+  flex-direction: column;
+  gap: var(--s2);
+  transition: border-color var(--dur-fast) var(--ease-standard);
 }
 
-.addon-card:hover {
-  border-color: var(--accent-secondary);
-  box-shadow: 0 8px 24px rgba(0, 206, 201, 0.1);
+.pricing-card:hover {
+  border-color: var(--forest);
 }
 
-.addon-card h4 {
-  font-family: var(--font-heading);
-  font-size: 0.92rem;
-  font-weight: 600;
-  margin-bottom: 2px;
-  letter-spacing: -0.01em;
+.pricing-card.featured {
+  border-color: var(--forest);
+  box-shadow: var(--shadow-2);
 }
 
-.addon-desc {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-.addon-price {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
+.pricing-name {
+  font-family: var(--font-mono);
   font-weight: 700;
-  white-space: nowrap;
-  color: var(--accent-primary);
-  letter-spacing: -0.02em;
+  font-size: 15px;
+  color: var(--ink);
 }
 
-.addon-price small {
-  font-family: var(--font-body);
-  font-size: 0.7rem;
+.pricing-name .pfx {
   font-weight: 500;
-  color: var(--text-muted);
 }
 
-/* ============================================
-   CTA Section
-   ============================================ */
-
-.cta-section {
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg) var(--spacing-3xl);
-  text-align: center;
-}
-
-.cta-section h2 {
+.pricing-amount {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: -0.03em;
-}
-
-.cta-section p {
-  color: var(--text-muted);
-  margin-bottom: var(--spacing-xl);
-  font-size: 0.95rem;
-}
-
-.cta-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: #fff;
   font-weight: 700;
-  font-size: 1.05rem;
-  padding: 16px 48px;
-  border-radius: 0.625rem;
-  text-decoration: none;
-  transition: all var(--transition-base);
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.pricing-amount small {
   font-family: var(--font-body);
-  box-shadow: 0 4px 20px rgba(108, 92, 231, 0.25);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mute);
 }
 
-.cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(108, 92, 231, 0.4);
+.pricing-period {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--mute);
 }
 
-/* ============================================
-   FAQ — Glass accordions
-   ============================================ */
+.pricing-divider {
+  height: 1px;
+  background: var(--hair);
+  margin: var(--s1) 0;
+}
 
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  flex: 1;
+}
+
+.pricing-features li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s1);
+}
+
+.pricing-features .check {
+  color: var(--forest);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pricing-features strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.pricing-cta {
+  display: block;
+  text-align: center;
+  padding: var(--s2);
+  border-radius: var(--r1);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid var(--hair);
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-standard);
+}
+
+.pricing-cta:hover {
+  border-color: var(--forest);
+  background: var(--accent-rgba-01);
+}
+
+.pricing-card.featured .pricing-cta {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.pricing-card.featured .pricing-cta:hover {
+  background: var(--forest-deep);
+}
+
+/* ── FAQ ── */
 .faq-section {
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg) var(--spacing-3xl);
-}
-
-.faq-section h2 {
-  text-align: center;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: var(--spacing-2xl);
-  letter-spacing: -0.02em;
+  padding: var(--s7) var(--s4);
 }
 
 .faq-section details {
+  border: 1px solid var(--hair);
+  border-radius: var(--r1);
+  padding: var(--s3);
+  margin-bottom: var(--s1);
   background: var(--bg-secondary);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: 0.625rem;
-  padding: var(--spacing-md) var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: border-color var(--dur-fast) var(--ease-standard);
 }
 
 .faq-section details:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--forest);
 }
 
 .faq-section details[open] {
-  border-color: var(--accent-light-purple-rgba-03);
-  background: var(--bg-tertiary);
+  border-color: var(--forest);
 }
 
 .faq-section details summary {
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 15px;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--text-primary);
+  color: var(--ink);
 }
 
 .faq-section details summary::after {
   content: '+';
   font-family: var(--font-mono);
-  font-size: 1.2rem;
-  color: var(--text-muted);
-  transition: all var(--transition-fast);
-  margin-left: var(--spacing-md);
+  font-size: 16px;
+  color: var(--mute);
+  transition: all var(--dur-fast) var(--ease-standard);
 }
 
 .faq-section details[open] summary::after {
   content: '−';
-  color: var(--accent-primary);
+  color: var(--forest);
 }
 
 .faq-section details p {
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  margin-top: var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: var(--s2);
   line-height: 1.7;
 }
 
-/* ============================================
-   Scroll reveal animation
-   ============================================ */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+/* ── CTA section ── */
+.cta-section {
+  text-align: center;
+  padding: var(--s7) var(--s4);
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+.cta-section .hero-cta {
+  display: inline-block;
+  margin-top: var(--s3);
 }

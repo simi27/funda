@@ -1,123 +1,101 @@
-/* FUNDA Color System — adapts Mana theme variables */
+/* ═══════════════════════════════════════════
+   funda — Design Token System
+   Forest green, paper, JetBrains Mono + Space Grotesk
+   Everything flows from these variables.
+   ═══════════════════════════════════════════ */
+
 :root {
-  /* FUNDA Palette — keeps Mana's depth, swaps accents */
-  --bg-deep: #06080f;
-  --accent-primary: #6c5ce7;
-  --accent-mid-purple: #8b7cf0;
-  --accent-light-purple: #a99bfa;
-  --accent-secondary: #00cec9;
+  /* ── Palette ── */
+  --ink:        #0E2A1F;
+  --forest:     #1B7A46;
+  --forest-deep:#114D2D;
+  --paper:      #F6F2E9;
+  --mist:       #E3E8DD;
+  --mute:       #9B9586;
+  --hair:       rgba(14,42,31,0.10);
+  --hair-strong:rgba(14,42,31,0.18);
 
-  /* Glass surfaces — Mana's signature */
-  --glass-surface: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-block: rgb(255, 255, 255);
+  /* ── Surfaces ── */
+  --bg-primary:    var(--paper);
+  --bg-secondary:  #FFFFFF;
+  --bg-tertiary:   var(--mist);
+  --text-primary:  var(--ink);
+  --text-secondary:#5A5566;
+  --text-muted:    var(--mute);
+  --border-color:  var(--hair);
+  --border-strong: var(--hair-strong);
 
-  /* Semantic aliases */
-  --bg-primary: var(--bg-deep);
-  --bg-secondary: rgba(255, 255, 255, 0.04);
-  --bg-tertiary: rgba(255, 255, 255, 0.06);
-  --text-primary: #f0f2fa;
-  --text-secondary: #c8ccdb;
-  --text-muted: #8086a0;
-  --accent-hover: #5a4bd4;
-  --border-color: rgba(108, 92, 231, 0.15);
+  /* ── Accent (forest green, single accent — no secondary color) ── */
+  --accent:        var(--forest);
+  --accent-hover:  var(--forest-deep);
+  --accent-rgba-01: rgba(27,122,70,0.10);
+  --accent-rgba-02: rgba(27,122,70,0.20);
 
-  /* Accent RGBA for effects */
-  --accent-primary-rgba-03: rgba(108, 92, 231, 0.3);
-  --accent-primary-rgba-05: rgba(108, 92, 231, 0.5);
-  --accent-light-purple-rgba-01: rgba(169, 155, 250, 0.1);
-  --accent-light-purple-rgba-03: rgba(169, 155, 250, 0.3);
-  --accent-mid-purple-rgba-05: rgba(139, 124, 240, 0.05);
-  --accent-mid-purple-rgba-01: rgba(139, 124, 240, 0.1);
-  --accent-mid-purple-rgba-02: rgba(139, 124, 240, 0.2);
+  /* ── 8px Spacing Scale (the law — nothing freehand) ── */
+  --s1:  8px;
+  --s2:  16px;
+  --s3:  24px;
+  --s4:  32px;
+  --s5:  40px;
+  --s6:  48px;
+  --s7:  64px;
+  --s8:  96px;
 
-  --tag-bg: rgba(108, 92, 231, 0.12);
-  --tag-color: var(--accent-primary);
+  /* ── Radius Scale ── */
+  --r1: 8px;
+  --r2: 12px;
+  --r3: 16px;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+  /* ── Shadow Scale (subtle only — no floating cards) ── */
+  --shadow-1: 0 1px 3px rgba(14,42,31,0.06);
+  --shadow-2: 0 12px 24px -8px rgba(14,42,31,0.18);
 
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 5rem;
+  /* ── Typography ── */
+  --font-heading:  "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:     "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:     "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Liberation Mono", monospace;
 
-  /* Typography — Mana's font system */
-  --font-heading: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-logo: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-sans: var(--font-body);
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Liberation Mono", monospace;
-
-  --transition-fast: 150ms ease;
-  --transition-base: 300ms ease;
-  --transition-slow: 500ms ease;
-
-  --icon-sm: 1rem;
-  --icon-md: 1.25rem;
-  --icon-lg: 1.5rem;
-
-  /* FUNDA extras */
-  --accent-glow: rgba(108, 92, 231, 0.2);
-  --green: #55efc4;
+  /* ── Animation Scale ── */
+  --ease-standard: cubic-bezier(.6,0,.2,1);
+  --dur-fast:   150ms;
+  --dur-normal: 300ms;
+  --dur-slow:   380ms;
 }
 
-/* Modern CSS Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ── Reset ── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
 }
 
 body {
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
-  background-color: var(--bg-deep);
-  color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
-  overflow-x: clip;
-  position: relative;
-
-  /* Mana's nebula radial gradient adapted for FUNDA */
-  background-image:
-    radial-gradient(circle at 20% 0%, rgba(108, 92, 231, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 80% 100%, rgba(0, 206, 201, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at center, rgba(30, 30, 80, 0.3) 0%, transparent 70%);
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
 
-/* Subtle noise texture overlay — Mana's signature touch */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  background-size: 400px 400px;
-  background-repeat: repeat;
-  opacity: 0.04;
-  pointer-events: none;
-  z-index: 0;
+/* ── Accessibility ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-body > * {
-  position: relative;
-  z-index: 1;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
 }

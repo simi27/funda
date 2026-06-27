@@ -1,0 +1,63 @@
+/* ═══════════ Service Rail — vertical dot list beside hero ═══════════ */
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+  text-transform: uppercase;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--s2) var(--s4) var(--s1);
+}
+
+.rail {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--s2) var(--s4) var(--s6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.rail-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s2);
+}
+
+.rail-bullet {
+  font-size: 13px;
+  color: var(--mute);
+  transition: color var(--dur-normal) var(--ease-standard);
+  width: 1em;
+}
+
+.rail-name {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  width: 9ch;
+  flex-shrink: 0;
+  color: var(--mute);
+  transition: color var(--dur-normal) var(--ease-standard);
+}
+
+.rail-name .pfx {
+  font-weight: 500;
+}
+
+.rail-desc {
+  font-size: 14px;
+  color: var(--mute);
+  transition: color var(--dur-normal) var(--ease-standard);
+}
+
+.rail-item.active .rail-bullet,
+.rail-item.active .rail-name {
+  color: var(--forest);
+}
+
+.rail-item.active .rail-desc {
+  color: var(--ink);
+}

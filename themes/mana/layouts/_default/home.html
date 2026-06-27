@@ -1,194 +1,148 @@
 {{ define "main" }}
 
-<!-- ═══════════════ HERO — Mana's two-line outlined system ═══════════════ -->
+<!-- ═══════════════════════════════════════════════════════════
+     HERO — rotating wordmark, single source of truth
+     ═══════════════════════════════════════════════════════════ -->
 <section class="hero-section">
-  <div class="hero-container">
-    <div class="hero-content">
+  <div class="wordmark">
+    <span class="prefix">funda</span>
+    <span class="suffix-window" id="suffixWindow">
+      <span class="suffix" id="suffixText">MENTALS</span>
+    </span>
+  </div>
 
-      <div class="hero-image">
-        <div class="hero-logo">
-          <span class="hero-logo-box">F</span>
-          <span class="hero-logo-box">U</span>
-          <span class="hero-logo-box">N</span>
-          <span class="hero-logo-box">D</span>
-          <span class="hero-logo-box">A</span>
-        </div>
-      </div>
+  <div class="hero-tagline">Everything starts with the fundamentals.</div>
 
-      <div class="hero-text">
-        <span class="hero-pill">✦ The fundamentals of your online presence</span>
+  <div class="hero-divider"></div>
 
-        <h1 class="hero-title">
-          <span class="hero-title-line1">Your domain.</span>
-          <span class="hero-title-line2">Your email. Your brand.</span>
-        </h1>
+  <div class="hero-pills">Websites &middot; Email &middot; Domains &middot; Hosting</div>
 
-        <p class="hero-subtitle">Professional email hosting, domains, and websites — built for speed, reliability, and simplicity.</p>
-      </div>
+  <a href="#contact" class="hero-cta">Get Started</a>
 
+  <div class="legend" id="legend"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TICKER — hero scale, sits under headline
+     ═══════════════════════════════════════════════════════════ -->
+<div class="marquee ticker--hero" aria-hidden="true">
+  <div class="marquee-track" id="ticker-hero"></div>
+</div>
+<span class="sr-only">The fundamentals: fundaWEB, fundaMAIL, fundaDOMAIN, fundaHOSTING.</span>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE RAIL — synced to hero rotator
+     ═══════════════════════════════════════════════════════════ -->
+<div class="section-label" id="services">Service Rail</div>
+<div class="rail" id="rail"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE CARDS — synced to hero rotator, subtle lift
+     ═══════════════════════════════════════════════════════════ -->
+<div class="cards-section">
+  <div class="cards-grid" id="cards"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY FUNDA
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section">
+  <h2 class="section-heading">Why funda</h2>
+  <p class="section-subheading">The fundamentals, done properly</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-card-icon">⚡</div>
+      <h4>Fast Setup</h4>
+      <p>Your email and site are live within 24 hours. No tech skills needed.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon">🔒</div>
+      <h4>Secure by Default</h4>
+      <p>Spam filters, virus scanning, and managed SSL on every account.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon">📱</div>
+      <h4>Any Device</h4>
+      <p>Access your email on your phone, laptop, or via webmail — anywhere.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon">🇿🇦</div>
+      <h4>South African Support</h4>
+      <p>Local support when you need it. No chatbots, just real people.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ MANIFESTO ═══════════════ -->
-<div class="manifesto reveal">
-  <p>
-    <strong>FUNDA</strong> is what you need to <strong>get moving</strong>.
-    High-quality email hosting at your own domain — built for
-    <strong>South African small businesses</strong>.
-    We keep the fundamentals strong so you can focus on what matters:
-    <strong>growing your business</strong>.
-    <br><br>
-    <span class="highlight">⚡ Because getting online shouldn&rsquo;t be complicated.</span>
-  </p>
-</div>
+<!-- ═══════════════════════════════════════════════════════════
+     PRICING
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="pricing">
+  <h2 class="section-heading">Pricing</h2>
+  <p class="section-subheading">Email hosting — month to month, cancel anytime</p>
 
-<!-- ═══════════════ BILLING TOGGLE ═══════════════ -->
-<div class="billing-toggle reveal" id="billingToggleContainer">
-  <span class="active" id="label-monthly">Monthly</span>
-  <div class="toggle-track" id="billingToggle" onclick="toggleBilling()" role="switch" aria-checked="false" tabindex="0" aria-label="Toggle monthly/yearly billing"></div>
-  <span id="label-yearly">Yearly <span class="badge-save">Save ~15%</span></span>
-</div>
+  <div class="pricing-grid">
 
-<!-- ═══════════════ PRICING ═══════════════ -->
-<div class="pricing-grid reveal" id="plans">
-
-  <!-- Bronze -->
-  <div class="pricing-card">
-    <div class="tier-icon">🥉</div>
-    <div class="tier-name">Bronze</div>
-    <div class="tier-desc">Perfect for getting started. One person, one domain.</div>
-    <div class="price" data-monthly="R79" data-yearly="R799"><span>R79</span><small>/mo</small></div>
-    <div class="price-sub" data-monthly="No contract. Cancel anytime." data-yearly="R799/yr (R67/mo)">No contract. Cancel anytime.</div>
-    <div class="card-divider"></div>
-    <ul class="feature-list">
-      <li><span class="check">✓</span> <strong>2 email accounts</strong> <span class="muted">(you + 1 extra)</span></li>
-      <li><span class="check">✓</span> <strong>500 MB</strong> storage</li>
-      <li><span class="check">✓</span> <strong>1 GB</strong> bandwidth</li>
-      <li><span class="check">✓</span> Spam &amp; virus protection</li>
-      <li><span class="check">✓</span> Webmail + mobile/desktop access</li>
-      <li><span class="check">✓</span> Free SSL certificate</li>
-    </ul>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-
-  <!-- Silver (Popular) -->
-  <div class="pricing-card popular">
-    <div class="popular-badge">⭐ Most Popular</div>
-    <div class="tier-icon">🥈</div>
-    <div class="tier-name">Silver</div>
-    <div class="tier-desc">Built for small teams. More mailboxes, more space.</div>
-    <div class="price" data-monthly="R149" data-yearly="R1,499"><span>R149</span><small>/mo</small></div>
-    <div class="price-sub" data-monthly="No contract. Cancel anytime." data-yearly="R1,499/yr (R125/mo)">No contract. Cancel anytime.</div>
-    <div class="card-divider"></div>
-    <ul class="feature-list">
-      <li><span class="check">✓</span> <strong>5 email accounts</strong> <span class="muted">(you + 4 more)</span></li>
-      <li><span class="check">✓</span> <strong>1 GB</strong> storage</li>
-      <li><span class="check">✓</span> <strong>2 GB</strong> bandwidth</li>
-      <li><span class="check">✓</span> Spam &amp; virus protection</li>
-      <li><span class="check">✓</span> Webmail + mobile/desktop access</li>
-      <li><span class="check">✓</span> Free SSL certificate</li>
-    </ul>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-
-  <!-- Gold -->
-  <div class="pricing-card">
-    <div class="tier-icon">🥇</div>
-    <div class="tier-name">Gold</div>
-    <div class="tier-desc">Unlimited mailboxes for growing businesses and teams.</div>
-    <div class="price" data-monthly="R249" data-yearly="R2,499"><span>R249</span><small>/mo</small></div>
-    <div class="price-sub" data-monthly="No contract. Cancel anytime." data-yearly="R2,499/yr (R208/mo)">No contract. Cancel anytime.</div>
-    <div class="card-divider"></div>
-    <ul class="feature-list">
-      <li><span class="check">✓</span> <strong>Unlimited</strong> email accounts</li>
-      <li><span class="check">✓</span> <strong>2 GB</strong> storage</li>
-      <li><span class="check">✓</span> <strong>5 GB</strong> bandwidth</li>
-      <li><span class="check">✓</span> Spam &amp; virus protection</li>
-      <li><span class="check">✓</span> Webmail + mobile/desktop access</li>
-      <li><span class="check">✓</span> Free SSL certificate</li>
-    </ul>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-</div>
-
-<!-- ═══════════════ VALUE PROPS ═══════════════ -->
-<div class="values-grid reveal">
-  <div class="value-card">
-    <span class="emoji">⚡</span>
-    <h4>Fast Setup</h4>
-    <p>Your email is live within 24 hours. No tech skills needed.</p>
-  </div>
-  <div class="value-card">
-    <span class="emoji">🔒</span>
-    <h4>Secure by Default</h4>
-    <p>Spam filters, virus scanning, and free SSL on every account.</p>
-  </div>
-  <div class="value-card">
-    <span class="emoji">📱</span>
-    <h4>Any Device</h4>
-    <p>Access your email on your phone, laptop, or via webmail. Anywhere.</p>
-  </div>
-  <div class="value-card">
-    <span class="emoji">🤝</span>
-    <h4>SA Support</h4>
-    <p>Local support when you need it. No chatbots, just real people.</p>
-  </div>
-</div>
-
-<!-- ═══════════════ ADD-ONS ═══════════════ -->
-<section class="addons-section reveal" id="addons">
-  <h2 class="section-heading">➕ Everything else you need</h2>
-  <p class="section-subheading">Add-ons to complete your online presence — only pay for what you use.</p>
-  <div class="addons-grid">
-    <div class="addon-card">
-      <div>
-        <h4>🌐 Domain Registration</h4>
-        <p class="addon-desc">Get your own .co.za or .com — registered and managed.</p>
-      </div>
-      <div class="addon-price">R199 <small>/yr</small></div>
+    <!-- Bronze -->
+    <div class="pricing-card">
+      <div class="pricing-name"><span class="pfx">funda</span>MAIL Bronze</div>
+      <div class="pricing-amount">R79<small>/mo</small></div>
+      <div class="pricing-period">No contract. Cancel anytime.</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> <strong>2 email accounts</strong></li>
+        <li><span class="check">✓</span> 500 MB storage</li>
+        <li><span class="check">✓</span> 1 GB bandwidth</li>
+        <li><span class="check">✓</span> Spam &amp; virus protection</li>
+        <li><span class="check">✓</span> Webmail + mobile/desktop</li>
+        <li><span class="check">✓</span> Free SSL certificate</li>
+      </ul>
+      <a href="#contact" class="pricing-cta">Get Started</a>
     </div>
-    <div class="addon-card">
-      <div>
-        <h4>🔒 Managed SSL</h4>
-        <p class="addon-desc">Auto-renewing encryption. We handle it so you don&rsquo;t have to.</p>
-      </div>
-      <div class="addon-price">R299 <small>/yr</small></div>
+
+    <!-- Silver (featured) -->
+    <div class="pricing-card featured">
+      <div class="pricing-name"><span class="pfx">funda</span>MAIL Silver</div>
+      <div class="pricing-amount">R149<small>/mo</small></div>
+      <div class="pricing-period">Most popular &bull; No contract</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> <strong>5 email accounts</strong></li>
+        <li><span class="check">✓</span> 1 GB storage</li>
+        <li><span class="check">✓</span> 2 GB bandwidth</li>
+        <li><span class="check">✓</span> Spam &amp; virus protection</li>
+        <li><span class="check">✓</span> Webmail + mobile/desktop</li>
+        <li><span class="check">✓</span> Free SSL certificate</li>
+      </ul>
+      <a href="#contact" class="pricing-cta">Get Started</a>
     </div>
-    <div class="addon-card">
-      <div>
-        <h4>📬 Extra Mailbox</h4>
-        <p class="addon-desc">Add another email account to any plan.</p>
-      </div>
-      <div class="addon-price">R29 <small>/mo</small></div>
+
+    <!-- Gold -->
+    <div class="pricing-card">
+      <div class="pricing-name"><span class="pfx">funda</span>MAIL Gold</div>
+      <div class="pricing-amount">R249<small>/mo</small></div>
+      <div class="pricing-period">No contract. Cancel anytime.</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> <strong>Unlimited email accounts</strong></li>
+        <li><span class="check">✓</span> 2 GB storage</li>
+        <li><span class="check">✓</span> 5 GB bandwidth</li>
+        <li><span class="check">✓</span> Spam &amp; virus protection</li>
+        <li><span class="check">✓</span> Webmail + mobile/desktop</li>
+        <li><span class="check">✓</span> Free SSL certificate</li>
+      </ul>
+      <a href="#contact" class="pricing-cta">Get Started</a>
     </div>
-    <div class="addon-card">
-      <div>
-        <h4>🛠 Maintenance</h4>
-        <p class="addon-desc">Backups, updates, and security monitoring — peace of mind.</p>
-      </div>
-      <div class="addon-price">R350 <small>/mo</small></div>
-    </div>
-    <div class="addon-card">
-      <div>
-        <h4>🌍 Website</h4>
-        <p class="addon-desc">Professional Netlify site — design, build, and hosting included.</p>
-      </div>
-      <div class="addon-price">From R4,500</div>
-    </div>
+
   </div>
 </section>
 
-<!-- ═══════════════ CTA ═══════════════ -->
-<section class="cta-section reveal" id="contact">
-  <h2>Ready to build your online presence?</h2>
-  <p>Drop us a message and we&rsquo;ll have you set up within 24 hours.</p>
-  <a href="mailto:hello@funda.africa?subject=Let's%20get%20started&body=Hi%20FUNDA,%0A%0AI'd%20like%20to%20get%20online.%20Here's%20what%20I%20need:%0A%0A%F0%9F%93%A6%20Plan:%20%E2%96%A1%20Bronze%20%E2%96%A1%20Silver%20%E2%96%A1%20Gold%0A%F0%9F%8C%90%20Domain:%20(if%20you%20have%20one)%0A%F0%9F%93%AC%20Mailboxes%20needed:%20%0A%0AAny%20questions?" class="cta-btn">✉️ hello@funda.africa</a>
-</section>
-
-<!-- ═══════════════ FAQ ═══════════════ -->
-<section class="faq-section reveal" id="faq">
-  <h2 class="section-heading">❓ The fundamentals — explained</h2>
+<!-- ═══════════════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <h2 class="section-heading">FAQ</h2>
+  <p class="section-subheading">The fundamentals — explained</p>
 
   <details>
     <summary>What exactly do I get?</summary>
@@ -196,75 +150,170 @@
   </details>
   <details>
     <summary>Can I use my own domain?</summary>
-    <p>Absolutely. You can bring any domain you own, or we&rsquo;ll register one for you (R199/yr for .co.za). We&rsquo;ll point it to our mail servers — free of charge.</p>
+    <p>Absolutely. You can bring any domain you own, or we&rsquo;ll register one for you. We&rsquo;ll point it to our mail servers — free of charge.</p>
   </details>
   <details>
     <summary>Is there a contract?</summary>
-    <p>Nope. Month-to-month, cancel anytime. Annual billing saves you about 15% if you want to lock in a lower rate.</p>
+    <p>Nope. Month-to-month, cancel anytime. No long-term lock-in.</p>
   </details>
   <details>
     <summary>Can I check email on my phone?</summary>
-    <p>Yes! Webmail works in any browser, or you can set up your email in the Gmail app, Apple Mail, Outlook — anything that supports IMAP.</p>
+    <p>Yes. Webmail works in any browser, or set up your email in the Gmail app, Apple Mail, Outlook — anything that supports IMAP.</p>
   </details>
   <details>
-    <summary>Do you build websites too?</summary>
-    <p>We do. We build fast, secure websites on Netlify — perfect for small businesses who want a professional online presence without WordPress headaches. Ask us for a quote.</p>
+    <summary>Do you build websites?</summary>
+    <p>Yes — fundaWEB. We build fast, secure websites on Netlify. Perfect for small businesses who want a professional online presence without WordPress headaches.</p>
   </details>
   <details>
-    <summary>How is FUNDA different?</summary>
+    <summary>How is funda different?</summary>
     <p>We focus on the fundamentals — done properly. Professional email at your domain, transparent pricing, no upsells, and local support. We keep it simple so you can get on with business.</p>
   </details>
 </section>
 
-<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<!-- ═══════════════════════════════════════════════════════════
+     CTA
+     ═══════════════════════════════════════════════════════════ -->
+<section class="cta-section" id="contact">
+  <h2 class="section-heading">Ready to get online?</h2>
+  <p class="section-subheading">We&rsquo;ll have you set up within 24 hours.</p>
+  <a href="mailto:hello@funda.africa?subject=Let's%20get%20started&body=Hi%20funda,%0A%0AI'd%20like%20to%20get%20online.%20Here's%20what%20I%20need:%0A%0A📦%20Plan:%20%E2%96%A1%20Bronze%20%E2%96%A1%20Silver%20%E2%96%A1%20Gold%0A🌐%20Domain:%20(if%20you%20have%20one)%0A📬%20Mailboxes%20needed:%20%0A%0AAny%20questions?" class="hero-cta">✉️ hello@funda.africa</a>
+</section>
 
-<!-- Billing toggle -->
+<!-- ═══════════════════════════════════════════════════════════
+     TICKER — strip scale, footer chrome
+     ═══════════════════════════════════════════════════════════ -->
+<div class="marquee ticker--strip" aria-hidden="true">
+  <div class="marquee-track" id="ticker-strip"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════════════════════════ -->
+
+<!-- Shared data: current, live services only -->
 <script>
-  let yearly = false;
-  function toggleBilling() {
-    yearly = !yearly;
-    const track = document.getElementById('billingToggle');
-    track.classList.toggle('yearly', yearly);
-    track.setAttribute('aria-checked', yearly);
-    const prices = document.querySelectorAll('.price');
-    const subs = document.querySelectorAll('.price-sub');
-    prices.forEach(p => {
-      const span = p.querySelector('span');
-      const small = p.querySelector('small');
-      if (yearly) {
-        span.textContent = p.dataset.yearly;
-        small.textContent = '/yr';
-      } else {
-        span.textContent = p.dataset.monthly;
-        small.textContent = '/mo';
-      }
-    });
-    subs.forEach(s => {
-      s.textContent = yearly ? s.dataset.yearly : s.dataset.monthly;
-    });
-    document.getElementById('label-monthly').classList.toggle('active', !yearly);
-    document.getElementById('label-yearly').classList.toggle('active', yearly);
-  }
-  // Keyboard support for toggle
-  document.getElementById('billingToggle').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleBilling(); }
-  });
+  const services = [
+    { word:'WEB',     name:'fundaWEB',     desc:'Websites' },
+    { word:'MAIL',    name:'fundaMAIL',    desc:'Professional Email' },
+    { word:'DOMAIN',  name:'fundaDOMAIN',  desc:'Your Online Identity' },
+    { word:'HOSTING', name:'fundaHOSTING', desc:'Fast & Secure Hosting' },
+  ];
+  const cycle = ['MENTALS','WEB','MAIL','DOMAIN','HOSTING'];
+  const tickerItems = ['ANCHOR','WEB','MAIL','DOMAIN','HOSTING'];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 </script>
 
-<!-- Scroll reveal -->
+<!-- Hero rotator — single source of truth (applyState) -->
 <script>
-  (function() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  const suffixWindow = document.getElementById('suffixWindow');
+  const suffixText = document.getElementById('suffixText');
+  const railEl = document.getElementById('rail');
+  const cardsEl = document.getElementById('cards');
+  const legendEl = document.getElementById('legend');
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  })();
+  let idx = 0;
+
+  // Build legend
+  cycle.forEach((w, i) => {
+    const el = document.createElement('div');
+    el.className = 'legend-item' + (i === 0 ? ' active' : '');
+    el.textContent = w;
+    legendEl.appendChild(el);
+  });
+
+  // Build rail + cards
+  services.forEach(s => {
+    const r = document.createElement('div');
+    r.className = 'rail-item';
+    r.dataset.word = s.word;
+    r.innerHTML = '<span class="rail-bullet">○</span><span class="rail-name"><span class="pfx">funda</span>' + s.word + '</span><span class="rail-desc">' + s.desc + '</span>';
+    railEl.appendChild(r);
+
+    const c = document.createElement('div');
+    c.className = 'card';
+    c.dataset.word = s.word;
+    c.innerHTML = '<span class="card-dot"></span><span class="card-name"><span class="pfx">funda</span>' + s.word + '</span><span class="card-desc">' + s.desc + '</span>';
+    cardsEl.appendChild(c);
+  });
+
+  function setWidth(word) {
+    suffixWindow.style.width = word.length + 'ch';
+  }
+  setWidth(cycle[idx]);
+
+  function applyState(word) {
+    // Legend
+    [...legendEl.children].forEach((el, i) => {
+      el.classList.toggle('active', i === idx);
+    });
+    // Rail
+    [...railEl.children].forEach(el => {
+      const active = el.dataset.word === word;
+      el.classList.toggle('active', active);
+      el.querySelector('.rail-bullet').textContent = active ? '◉' : '○';
+    });
+    // Cards
+    [...cardsEl.children].forEach(el => {
+      el.classList.toggle('active', el.dataset.word === word);
+    });
+  }
+  applyState(cycle[idx]);
+
+  function advance() {
+    const next = (idx + 1) % cycle.length;
+    const nextWord = cycle[next];
+
+    suffixText.classList.add('out');
+
+    setTimeout(() => {
+      idx = next;
+      suffixText.textContent = nextWord;
+      setWidth(nextWord);
+      applyState(nextWord);
+
+      suffixText.classList.remove('out');
+      suffixText.classList.add('in-start');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          suffixText.classList.remove('in-start');
+        });
+      });
+    }, reduceMotion ? 0 : 360);
+  }
+
+  if (!reduceMotion) {
+    setInterval(advance, 2600);
+  }
+</script>
+
+<!-- Marquee ticker — ambient, never synced to UI -->
+<script>
+  function buildTickerGroup() {
+    const group = document.createElement('div');
+    group.className = 'marquee-group';
+    tickerItems.forEach(word => {
+      const item = document.createElement('span');
+      item.className = 'marquee-item';
+      if (word === 'ANCHOR') {
+        item.innerHTML = '<span class="marquee-anchor">THE FUNDAMENTALS</span>';
+      } else {
+        item.innerHTML = '<span class="marquee-prefix">funda</span><span class="marquee-suffix">' + word + '</span>';
+      }
+      group.appendChild(item);
+
+      const arrow = document.createElement('span');
+      arrow.className = 'marquee-arrow';
+      arrow.textContent = ' → ';
+      group.appendChild(arrow);
+    });
+    return group;
+  }
+
+  ['ticker-hero', 'ticker-strip'].forEach(id => {
+    const track = document.getElementById(id);
+    track.appendChild(buildTickerGroup());
+    track.appendChild(buildTickerGroup());
+  });
 </script>
 
 {{ end }}

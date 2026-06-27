@@ -1,5 +1,1 @@
-{{ $utils := resources.Get "js/utils.js" }}
-{{ $themeToggle := resources.Get "js/theme-toggle.js" }}
-{{ $constants := resources.Get "js/common/constants.js" }}
-{{ $js := slice $constants $utils $themeToggle | resources.Concat "js/main.js" | minify | fingerprint }}
-<script src="{{ $js.RelPermalink }}" defer></script>
+<!-- All JS is inline in home.html — no external bundle needed -->
