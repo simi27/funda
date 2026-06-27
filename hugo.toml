@@ -66,6 +66,8 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   ctaEmail = "hello@funda.africa"
   ctaPhone = "+27 65 969 3995"
   ctaWhatsApp = "27659693995"
+  ctaPhoneTZ = "+255 79 699 9195"
+  ctaWhatsAppTZ = "255796999195"
   ctaLocation = "Durban, South Africa"
   ctaMailtoSubject = "Let's get started"
 

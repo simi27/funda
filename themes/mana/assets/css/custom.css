@@ -388,6 +388,32 @@ select.form-input {
   color: var(--forest);
 }
 
+/* ── Country columns ── */
+.contact-countries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s3);
+}
+
+.contact-country {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.contact-country-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--mute);
+  text-transform: uppercase;
+  margin-bottom: var(--s1);
+}
+
+.contact-email {
+  margin-bottom: var(--s1);
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .contact-grid {
