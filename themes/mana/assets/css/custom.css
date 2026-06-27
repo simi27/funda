@@ -414,6 +414,19 @@ select.form-input {
   margin-bottom: var(--s1);
 }
 
+/* ── WhatsApp highlight ── */
+.contact-whatsapp {
+  background: rgba(37, 211, 102, 0.08);
+  border-radius: var(--r1);
+  padding: var(--s2) var(--s3);
+  border: 1px solid rgba(37, 211, 102, 0.18);
+}
+
+.contact-whatsapp .contact-icon {
+  background: rgba(37, 211, 102, 0.15);
+  border-color: rgba(37, 211, 102, 0.25);
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .contact-grid {
