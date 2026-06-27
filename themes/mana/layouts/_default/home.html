@@ -1,50 +1,57 @@
 {{ define "main" }}
 
-<!-- Hero -->
-<section class="funda-hero">
-  <div class="funda-pill">✦ The fundamentals of your online presence</div>
+<!-- ═══════════════ HERO — Mana's two-line outlined system ═══════════════ -->
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
 
-  <div class="funda-hero-logo">
-    <span class="hero-box">F</span>
-    <span class="hero-box">U</span>
-    <span class="hero-box">N</span>
-    <span class="hero-box">D</span>
-    <span class="hero-box">A</span>
+      <div class="hero-image">
+        <div class="hero-logo">
+          <span class="hero-logo-box">F</span>
+          <span class="hero-logo-box">U</span>
+          <span class="hero-logo-box">N</span>
+          <span class="hero-logo-box">D</span>
+          <span class="hero-logo-box">A</span>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <span class="hero-pill">✦ The fundamentals of your online presence</span>
+
+        <h1 class="hero-title">
+          <span class="hero-title-line1">Your domain.</span>
+          <span class="hero-title-line2">Your email. Your brand.</span>
+        </h1>
+
+        <p class="hero-subtitle">Professional email hosting, domains, and websites — built for speed, reliability, and simplicity.</p>
+      </div>
+
+    </div>
   </div>
-
-  <h1>Your domain.<br><span>Your email. Your brand.</span></h1>
-
-  <p class="tagline">The fundamentals — done right.</p>
-  <p class="sub">
-    We give your business the essential building blocks to get online.<br>
-    Professional email at your own domain. No fluff. No hidden costs.
-  </p>
 </section>
 
-<!-- Manifesto -->
-<div class="funda-manifesto">
+<!-- ═══════════════ MANIFESTO ═══════════════ -->
+<div class="manifesto reveal">
   <p>
     <strong>FUNDA</strong> is what you need to <strong>get moving</strong>.
-    High-quality email hosting, domains, and websites — built for
-    <strong>speed, reliability, and simplicity</strong>.
+    High-quality email hosting at your own domain — built for
+    <strong>South African small businesses</strong>.
     We keep the fundamentals strong so you can focus on what matters:
     <strong>growing your business</strong>.
     <br><br>
-    <span style="color: var(--accent-primary); font-weight: 600;">
-      ⚡ Because getting online shouldn't be complicated.
-    </span>
+    <span class="highlight">⚡ Because getting online shouldn&rsquo;t be complicated.</span>
   </p>
 </div>
 
-<!-- Billing Toggle -->
-<div class="billing-toggle" id="billingToggleContainer">
+<!-- ═══════════════ BILLING TOGGLE ═══════════════ -->
+<div class="billing-toggle reveal" id="billingToggleContainer">
   <span class="active" id="label-monthly">Monthly</span>
-  <div class="toggle-track" id="billingToggle" onclick="toggleBilling()"></div>
+  <div class="toggle-track" id="billingToggle" onclick="toggleBilling()" role="switch" aria-checked="false" tabindex="0" aria-label="Toggle monthly/yearly billing"></div>
   <span id="label-yearly">Yearly <span class="badge-save">Save ~15%</span></span>
 </div>
 
-<!-- Pricing -->
-<div class="pricing-grid" id="pricingGrid">
+<!-- ═══════════════ PRICING ═══════════════ -->
+<div class="pricing-grid reveal" id="plans">
 
   <!-- Bronze -->
   <div class="pricing-card">
@@ -103,71 +110,85 @@
     </ul>
     <a href="#contact" class="btn">Get Started</a>
   </div>
-
 </div>
 
-<!-- Value Props -->
-<div class="values-grid">
+<!-- ═══════════════ VALUE PROPS ═══════════════ -->
+<div class="values-grid reveal">
   <div class="value-card">
-    <div class="emoji">⚡</div>
+    <span class="emoji">⚡</span>
     <h4>Fast Setup</h4>
     <p>Your email is live within 24 hours. No tech skills needed.</p>
   </div>
   <div class="value-card">
-    <div class="emoji">🔒</div>
+    <span class="emoji">🔒</span>
     <h4>Secure by Default</h4>
     <p>Spam filters, virus scanning, and free SSL on every account.</p>
   </div>
   <div class="value-card">
-    <div class="emoji">📱</div>
+    <span class="emoji">📱</span>
     <h4>Any Device</h4>
     <p>Access your email on your phone, laptop, or via webmail. Anywhere.</p>
   </div>
   <div class="value-card">
-    <div class="emoji">🤝</div>
+    <span class="emoji">🤝</span>
     <h4>SA Support</h4>
     <p>Local support when you need it. No chatbots, just real people.</p>
   </div>
 </div>
 
-<!-- Add-ons -->
-<section class="addons-section" id="addons">
-  <h2>➕ Everything else you need</h2>
-  <p>Add-ons to complete your online presence — only pay for what you use.</p>
+<!-- ═══════════════ ADD-ONS ═══════════════ -->
+<section class="addons-section reveal" id="addons">
+  <h2 class="section-heading">➕ Everything else you need</h2>
+  <p class="section-subheading">Add-ons to complete your online presence — only pay for what you use.</p>
   <div class="addons-grid">
     <div class="addon-card">
-      <div><h4>🌐 Domain Registration</h4><p class="addon-desc">Get your own .co.za or .com — registered and managed.</p></div>
+      <div>
+        <h4>🌐 Domain Registration</h4>
+        <p class="addon-desc">Get your own .co.za or .com — registered and managed.</p>
+      </div>
       <div class="addon-price">R199 <small>/yr</small></div>
     </div>
     <div class="addon-card">
-      <div><h4>🔒 Managed SSL</h4><p class="addon-desc">Auto-renewing encryption. We handle it so you don't have to.</p></div>
+      <div>
+        <h4>🔒 Managed SSL</h4>
+        <p class="addon-desc">Auto-renewing encryption. We handle it so you don&rsquo;t have to.</p>
+      </div>
       <div class="addon-price">R299 <small>/yr</small></div>
     </div>
     <div class="addon-card">
-      <div><h4>📬 Extra Mailbox</h4><p class="addon-desc">Add another email account to any plan.</p></div>
+      <div>
+        <h4>📬 Extra Mailbox</h4>
+        <p class="addon-desc">Add another email account to any plan.</p>
+      </div>
       <div class="addon-price">R29 <small>/mo</small></div>
     </div>
     <div class="addon-card">
-      <div><h4>🛠️ Maintenance</h4><p class="addon-desc">Backups, updates, and security monitoring — peace of mind.</p></div>
+      <div>
+        <h4>🛠 Maintenance</h4>
+        <p class="addon-desc">Backups, updates, and security monitoring — peace of mind.</p>
+      </div>
       <div class="addon-price">R350 <small>/mo</small></div>
     </div>
     <div class="addon-card">
-      <div><h4>🌍 Website</h4><p class="addon-desc">Professional Netlify site — design, build, and hosting included.</p></div>
+      <div>
+        <h4>🌍 Website</h4>
+        <p class="addon-desc">Professional Netlify site — design, build, and hosting included.</p>
+      </div>
       <div class="addon-price">From R4,500</div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section" id="contact">
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section reveal" id="contact">
   <h2>Ready to build your online presence?</h2>
-  <p>Drop us a message and we'll have you set up within 24 hours.</p>
-  <a href="mailto:hello@funda.africa?subject=Let's%20get%20started&body=Hi%20FUNDA%2C%0A%0AI'd%20like%20to%20get%20online.%20Here's%20what%20I%20need%3A%0A%0A%F0%9F%93%A6%20Plan%3A%20%E2%96%A1%20Bronze%20%E2%96%A1%20Silver%20%E2%96%A1%20Gold%0A%F0%9F%8C%90%20Domain%3A%20(if%20you%20have%20one)%0A%F0%9F%93%AC%20Mailboxes%20needed%3A%20%0A%0AAny%20questions%3F" class="cta-btn">✉️ hello@funda.africa</a>
+  <p>Drop us a message and we&rsquo;ll have you set up within 24 hours.</p>
+  <a href="mailto:hello@funda.africa?subject=Let's%20get%20started&body=Hi%20FUNDA,%0A%0AI'd%20like%20to%20get%20online.%20Here's%20what%20I%20need:%0A%0A%F0%9F%93%A6%20Plan:%20%E2%96%A1%20Bronze%20%E2%96%A1%20Silver%20%E2%96%A1%20Gold%0A%F0%9F%8C%90%20Domain:%20(if%20you%20have%20one)%0A%F0%9F%93%AC%20Mailboxes%20needed:%20%0A%0AAny%20questions?" class="cta-btn">✉️ hello@funda.africa</a>
 </section>
 
-<!-- FAQ -->
-<section class="faq-section" id="faq">
-  <h2>❓ The fundamentals — explained</h2>
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="faq-section reveal" id="faq">
+  <h2 class="section-heading">❓ The fundamentals — explained</h2>
 
   <details>
     <summary>What exactly do I get?</summary>
@@ -175,7 +196,7 @@
   </details>
   <details>
     <summary>Can I use my own domain?</summary>
-    <p>Absolutely. You can bring any domain you own, or we'll register one for you (R199/yr for .co.za). We'll point it to our mail servers — free of charge.</p>
+    <p>Absolutely. You can bring any domain you own, or we&rsquo;ll register one for you (R199/yr for .co.za). We&rsquo;ll point it to our mail servers — free of charge.</p>
   </details>
   <details>
     <summary>Is there a contract?</summary>
@@ -195,13 +216,16 @@
   </details>
 </section>
 
-<!-- Billing Toggle JS -->
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+
+<!-- Billing toggle -->
 <script>
   let yearly = false;
   function toggleBilling() {
     yearly = !yearly;
     const track = document.getElementById('billingToggle');
     track.classList.toggle('yearly', yearly);
+    track.setAttribute('aria-checked', yearly);
     const prices = document.querySelectorAll('.price');
     const subs = document.querySelectorAll('.price-sub');
     prices.forEach(p => {
@@ -221,6 +245,26 @@
     document.getElementById('label-monthly').classList.toggle('active', !yearly);
     document.getElementById('label-yearly').classList.toggle('active', yearly);
   }
+  // Keyboard support for toggle
+  document.getElementById('billingToggle').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleBilling(); }
+  });
+</script>
+
+<!-- Scroll reveal -->
+<script>
+  (function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  })();
 </script>
 
 {{ end }}
