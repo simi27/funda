@@ -289,6 +289,22 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
     [[params.servicePricing.tiers.features]]
       text = "Free SSL certificate"
 
+  [[params.servicePricing.tiers]]
+    name = "Extra Mailbox"
+    price = "R29"
+    period = "/mo"
+    sub = "Add to any plan"
+    featured = false
+    ctaUrl = "#contact"
+    ctaText = "Add Mailbox"
+    [[params.servicePricing.tiers.features]]
+      text = "1 additional email account"
+      highlight = true
+    [[params.servicePricing.tiers.features]]
+      text = "Adds to your existing plan"
+    [[params.servicePricing.tiers.features]]
+      text = "Set up within 24 hours"
+
 [[params.servicePricing]]
   code = "DOMAIN"
   name = "fundaDOMAIN"
