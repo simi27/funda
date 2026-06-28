@@ -446,6 +446,10 @@
   margin-top: var(--s2);
 }
 
+.form-label ~ .form-label {
+  margin-top: var(--s7);
+}
+
 .form-checks {
   display: flex;
   flex-direction: column;
