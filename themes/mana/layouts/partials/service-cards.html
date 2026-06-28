@@ -1,19 +1,19 @@
-<!-- Service Cards partial — grid, subtle lift on active, clickable → pricing -->
+<!-- Service Cards partial — SVG logos, grayed when inactive, full color when active -->
 {{ $services := site.Params.services }}
-{{ $icons := dict
-  "WEB"    "https://img.icons8.com/color/48/globe--v1.png"
-  "MAIL"   "https://img.icons8.com/color/48/secured-letter--v1.png"
-  "DOMAIN" "https://img.icons8.com/color/48/domain.png"
-  "HOSTING" "https://img.icons8.com/color/48/server.png"
+{{ $svgs := dict
+  "WEB"    (resources.Get "svg/fundaWEB.svg").Content
+  "MAIL"   (resources.Get "svg/fundaWEB.svg").Content
+  "DOMAIN" (resources.Get "svg/fundaWEB.svg").Content
+  "HOSTING" (resources.Get "svg/fundaWEB.svg").Content
 }}
 
 <div class="cards-section">
   <div class="cards-grid" id="cards">
     {{ range $services }}
     <div class="card" data-word="{{ .code }}" role="button" tabindex="0" onclick="goToPricing('{{ .code }}')" onkeydown="if(event.key==='Enter')goToPricing('{{ .code }}')">
-      <img src="{{ index $icons .code }}" alt="{{ .name }}" width="32" height="32" class="card-icon">
-      <span class="card-dot"></span>
-      <span class="card-name"><span class="pfx">funda</span>{{ .code }}</span>
+      <div class="card-logo">
+        {{ index $svgs .code | safeHTML }}
+      </div>
       <span class="card-desc">{{ .description }}</span>
     </div>
     {{ end }}

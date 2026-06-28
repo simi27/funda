@@ -31,31 +31,31 @@
 }
 
 .card-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--mute);
-  transition: background var(--dur-normal) var(--ease-standard);
+  display: none;
+}
+
+.card-logo {
+  width: 100%;
+  padding: var(--s2);
+}
+
+.card-logo svg {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%) opacity(0.4);
+  transition: filter var(--dur-normal) var(--ease-standard);
+}
+
+.card.active .card-logo svg {
+  filter: grayscale(0%) opacity(1);
 }
 
 .card-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  margin-bottom: var(--s1);
-  opacity: 0.85;
-  transition: opacity var(--dur-normal) var(--ease-standard);
-}
-
-.card.active .card-icon {
-  opacity: 1;
+  display: none;
 }
 
 .card-name {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--ink);
+  display: none;
 }
 
 .card-name .pfx {
