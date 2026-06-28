@@ -59,12 +59,44 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   ctaHeading = "Get to know us, Share Your Ideas, Let's Connect"
   ctaSubheading = "No commitment. No payment. Just a conversation about what you need — we'll align on the right solution and send you a clear proposal."
   ctaEmail = "hello@funda.africa"
-  ctaPhone = "+27 65 969 3995"
-  ctaWhatsApp = "27659693995"
-  ctaPhoneTZ = "+255 79 699 9195"
-  ctaWhatsAppTZ = "255796999195"
-  ctaLocation = "Durban, South Africa"
   ctaMailtoSubject = "Let's get started"
+
+  # Country contacts — rendered in contact section
+  [[params.countries]]
+    name = "South Africa"
+    flag_icon = "https://img.icons8.com/color/96/south-africa.png"
+    phone = "+27 65 969 3995"
+    whatsapp = "27659693995"
+
+  [[params.countries]]
+    name = "Tanzania"
+    flag_icon = "https://img.icons8.com/color/96/tanzania.png"
+    phone = "+255 79 699 9195"
+    whatsapp = "255796999195"
+
+  [[params.countries]]
+    name = "Kenya"
+    flag_icon = "https://img.icons8.com/color/96/kenya.png"
+    phone = ""
+    whatsapp = ""
+
+  [[params.countries]]
+    name = "Malawi"
+    flag_icon = "https://img.icons8.com/color/96/malawi.png"
+    phone = ""
+    whatsapp = ""
+
+  [[params.countries]]
+    name = "Nigeria"
+    flag_icon = "https://img.icons8.com/color/96/nigeria.png"
+    phone = ""
+    whatsapp = ""
+
+  [[params.countries]]
+    name = "United States"
+    flag_icon = "https://img.icons8.com/color/96/usa.png"
+    phone = ""
+    whatsapp = ""
 
   # Why funda cards
   [[params.why]]

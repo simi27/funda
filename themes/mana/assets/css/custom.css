@@ -637,14 +637,15 @@ select.form-input {
 /* ── Country columns ── */
 .contact-countries {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s3);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s2);
+  margin-top: var(--s2);
 }
 
 .contact-country {
   display: flex;
   flex-direction: column;
-  gap: var(--s2);
+  gap: var(--s1);
 }
 
 .contact-country-label {
@@ -654,6 +655,36 @@ select.form-input {
   color: var(--mute);
   text-transform: uppercase;
   margin-bottom: var(--s1);
+}
+
+.contact-phone-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--mute);
+  text-decoration: none;
+}
+
+.contact-phone-link:hover {
+  color: var(--forest);
+}
+
+.contact-whatsapp {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #25D366;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contact-countries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-countries {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-email {
