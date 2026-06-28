@@ -579,6 +579,54 @@ select.form-input {
   margin-bottom: var(--s1);
 }
 
+/* ── FAQ inside contact column ── */
+.contact-faq {
+  margin-top: var(--s4);
+}
+
+.contact-faq details {
+  border: 1px solid var(--hair);
+  border-radius: var(--r1);
+  padding: var(--s2) var(--s3);
+  margin-bottom: var(--s1);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-standard);
+}
+
+.contact-faq details:hover {
+  border-color: var(--forest);
+}
+
+.contact-faq details summary {
+  font-weight: 600;
+  font-size: 13px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink);
+}
+
+.contact-faq details summary::after {
+  content: '+';
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--mute);
+}
+
+.contact-faq details[open] summary::after {
+  content: '−';
+  color: var(--forest);
+}
+
+.contact-faq details p {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: var(--s1);
+  line-height: 1.6;
+}
+
 .flag-icon {
   display: inline-flex;
   align-items: center;

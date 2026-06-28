@@ -71,24 +71,9 @@
   }
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     FAQ
-     ═══════════════════════════════════════════════════════════ -->
-<section class="faq-section" id="faq">
-  <h2 class="section-heading">FAQ</h2>
-  <p class="section-subheading">{{ site.Params.faqLabel }}</p>
-
-  {{ range site.Params.faq }}
-  <details>
-    <summary>{{ .question }}</summary>
-    <p>{{ .answer }}</p>
-  </details>
-  {{ end }}
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
-     CONTACT — Contact Form
-     ═══════════════════════════════════════════════════════════ -->
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+</script>
 <section class="contact-section" id="contact">
   <h2 class="section-heading">{{ site.Params.ctaHeading }}</h2>
   <p class="section-subheading">{{ site.Params.ctaSubheading }}</p>
@@ -187,6 +172,17 @@
             </div>
           </a>
         </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="contact-faq" id="faq">
+        <h4 class="contact-country-label">FAQ</h4>
+        {{ range site.Params.faq }}
+        <details>
+          <summary>{{ .question }}</summary>
+          <p>{{ .answer }}</p>
+        </details>
+        {{ end }}
       </div>
     </div>
 
