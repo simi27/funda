@@ -126,7 +126,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
   [[params.faq]]
     question = "Can I use my own domain?"
-    answer = "Absolutely. You can bring any domain you own, or we'll register one for you. We'll point it to our mail servers — free of charge."
+    answer = "Absolutely. You can bring any domain you own, or we'll register one for you — .co.za (SA), .tz (Tanzania), .ke (Kenya), .ng (Nigeria), .mw (Malawi), .com, and more. We'll point it to our mail servers — free of charge."
 
   [[params.faq]]
     question = "Is there a contract?"
@@ -338,16 +338,16 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
     [[params.servicePricing.tiers.features]]
       text = "Set up within 24 hours"
 
-[[params.servicePricing]]
+  [[params.servicePricing]]
   code = "DOMAIN"
   name = "fundaDOMAIN"
-  description = "Your online identity starts with the right domain. Registered and managed."
+  description = "Your online identity starts with the right domain. Registered and managed across Africa."
 
   [[params.servicePricing.tiers]]
-    name = ".co.za"
-    price = "R199"
+    name = "Country Domains"
+    price = "From R199"
     period = "/yr"
-    sub = "South Africa's favourite"
+    sub = ".co.za · .tz · .ke · .ng · .mw"
     featured = false
     ctaUrl = "#contact"
     ctaText = "Register Now"
