@@ -1,0 +1,7 @@
+<script>
+window.__FUNDA_CURRENCIES__ = [
+  {{ range site.Params.currencies }}
+  { code: "{{ .code }}", symbol: "{{ .symbol }}", name: "{{ .name }}", rate: {{ .rate }}, countries: [{{ range $i, $c := .countries }}{{ if $i }},{{ end }}"{{ $c }}"{{ end }}] },
+  {{ end }}
+];
+</script>

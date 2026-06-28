@@ -1,0 +1,27 @@
+.currency-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: var(--s2);
+  padding: 2px 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--hair);
+  border-radius: var(--r1);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--mute);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-standard);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.currency-toggle:hover {
+  border-color: var(--forest);
+  color: var(--forest);
+}
+
+#currencyLabel {
+  font-weight: 700;
+  color: var(--forest);
+}

@@ -6,7 +6,7 @@
     {{ if $service }}<span class="pricing-service"><span class="pfx">funda</span>{{ $service }}</span>{{ end }}
     <span class="pricing-tier">{{ $tier.name }}</span>
   </div>
-  <div class="pricing-amount">{{ $tier.price }}<small>{{ $tier.period }}</small></div>
+  <div class="pricing-amount"><span data-price-zar="{{ $tier.priceZAR }}">{{ $tier.price }}</span><small>{{ $tier.period }}</small></div>
   <div class="pricing-period">{{ $tier.sub }}</div>
   <div class="pricing-divider"></div>
   <ul class="pricing-features">

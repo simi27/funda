@@ -8,6 +8,7 @@
   (resources.Get "css/cards.css")
   (resources.Get "css/footer.css")
   (resources.Get "css/custom.css")
+  (resources.Get "css/currency.css")
   (resources.Get "css/responsive.css")
 }}
 {{ $bundledCss := $cssFiles | resources.Concat "css/bundle.css" | minify | fingerprint }}

@@ -31,3 +31,6 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </noscript>
 {{ partial "head/css.html" . }}
+{{ partial "currencies.html" . }}
+{{ $currencyJs := resources.Get "js/currency.js" | minify | fingerprint }}
+<script src="{{ $currencyJs.RelPermalink }}" defer></script>
