@@ -450,6 +450,10 @@
   margin-top: var(--s7);
 }
 
+.contact-info .form-label {
+  margin-top: 0;
+}
+
 .form-checks {
   display: flex;
   flex-direction: column;
