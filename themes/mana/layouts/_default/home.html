@@ -33,40 +33,21 @@
 {{ partial "service-cards.html" . }}
 
 <!-- ═══════════════════════════════════════════════════════════
-     PRICING — tabbed by service
+     PRICING — Solutions Triangle (Good/Fast/Cheap)
      ═══════════════════════════════════════════════════════════ -->
 <section class="section" id="pricing">
   <h2 class="section-heading">Pricing</h2>
   <p class="section-subheading">{{ site.Params.pricingLabel }}</p>
 
-  <div class="pricing-tabs" id="pricingTabs">
-    {{ range $i, $svc := site.Params.servicePricing }}
-    <button class="pricing-tab{{ if eq $i 0 }} active{{ end }}" data-tab="{{ $svc.code }}" onclick="switchPricingTab('{{ $svc.code }}')">
-      <span class="pfx">funda</span>{{ $svc.code }}
-    </button>
+  <div class="pricing-grid">
+    {{ range site.Params.pricing }}
+    {{ partial "pricing-card.html" . }}
     {{ end }}
   </div>
-
-  {{ range $i, $svc := site.Params.servicePricing }}
-  <div class="pricing-panel{{ if eq $i 0 }} active{{ end }}" data-panel="{{ $svc.code }}">
-    <p class="pricing-desc">{{ $svc.description }}</p>
-    <div class="pricing-grid">
-      {{ range $svc.tiers }}
-      {{ partial "pricing-card.html" (merge . (dict "service" $svc.code)) }}
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
 </section>
 
 <script>
-  function switchPricingTab(code) {
-    document.querySelectorAll('.pricing-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === code));
-    document.querySelectorAll('.pricing-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === code));
-  }
-
-  function goToPricing(code) {
-    switchPricingTab(code);
+  function goToPricing() {
     document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
   }
 </script>
@@ -241,11 +222,6 @@
       cardsEl.querySelectorAll('.card').forEach(el => {
         el.classList.toggle('active', el.dataset.word === word);
       });
-    }
-    // Sync pricing tab: MENTALS → WEB, otherwise use the word directly
-    const tabCode = word === 'MENTALS' ? 'WEB' : word;
-    if (typeof switchPricingTab === 'function') {
-      switchPricingTab(tabCode);
     }
   }
   applyState(cycle[idx]);

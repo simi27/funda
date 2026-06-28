@@ -149,259 +149,71 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   name = "fundaHOSTING"
   description = "Fast & Secure Hosting"
 
-# ═══════════ Service Pricing ═══════════
-# Each service has its own pricing tiers.
-# Rendered as tabbed UI: tabs = services, panels = tiers.
+# ═══════════ Triangle Pricing (Good/Fast/Cheap — pick your fundamentals) ═══════════
+# Three tiers based on the solutions triangle. Every project is built on these.
 
-[[params.servicePricing]]
-  code = "WEB"
-  name = "fundaWEB"
-  description = "Modern websites — fast, secure, professional."
+[[params.pricing]]
+  name = "Premium"
+  tagline = "Good + Fast"
+  product = "Priority Delivery"
+  price = "From R8,500"
+  period = ""
+  sub = "Quality work, delivered fast. You get dedicated priority and the fastest turnaround."
+  featured = false
+  ctaUrl = "#contact"
+  ctaText = "Start a Project"
+  [[params.pricing.features]]
+    text = "Dedicated priority lane"
+    highlight = true
+  [[params.pricing.features]]
+    text = "Fastest turnaround times"
+  [[params.pricing.features]]
+    text = "Unlimited revisions"
+  [[params.pricing.features]]
+    text = "Direct line to team"
+  [[params.pricing.features]]
+    text = "Full service: WEB + MAIL + DOMAIN + HOSTING"
 
-  [[params.servicePricing.tiers]]
-    name = "Landing Page"
-    price = "R4,500"
-    period = "once-off"
-    sub = "Single page, fully responsive"
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Get Started"
-    [[params.servicePricing.tiers.features]]
-      text = "Custom design & development"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "Fast & secure hosting"
-    [[params.servicePricing.tiers.features]]
-      text = "Mobile responsive"
-    [[params.servicePricing.tiers.features]]
-      text = "Contact form"
-    [[params.servicePricing.tiers.features]]
-      text = "Free SSL certificate"
+[[params.pricing]]
+  name = "Standard"
+  tagline = "Good + Affordable"
+  product = "Best Value"
+  price = "From R4,500"
+  period = ""
+  sub = "The fundamentals done properly, at a fair price. Standard turnaround, same quality."
+  featured = true
+  ctaUrl = "#contact"
+  ctaText = "Start a Project"
+  [[params.pricing.features]]
+    text = "Professional quality output"
+    highlight = true
+  [[params.pricing.features]]
+    text = "Standard turnaround"
+  [[params.pricing.features]]
+    text = "Up to 2 revision rounds"
+  [[params.pricing.features]]
+    text = "Email & chat support"
+  [[params.pricing.features]]
+    text = "Choose any service: WEB · MAIL · DOMAIN · HOSTING"
 
-  [[params.servicePricing.tiers]]
-    name = "Business Site"
-    price = "R8,500"
-    period = "once-off"
-    sub = "Multi-page professional website"
-    featured = true
-    ctaUrl = "#contact"
-    ctaText = "Get Started"
-    [[params.servicePricing.tiers.features]]
-      text = "Up to 5 pages"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "Custom design & development"
-    [[params.servicePricing.tiers.features]]
-      text = "Mobile responsive"
-    [[params.servicePricing.tiers.features]]
-      text = "Fast & secure hosting"
-    [[params.servicePricing.tiers.features]]
-      text = "Contact form"
-    [[params.servicePricing.tiers.features]]
-      text = "Free SSL certificate"
-
-  [[params.servicePricing.tiers]]
-    name = "Custom"
-    price = "From R15,000"
-    period = ""
-    sub = "E-commerce, dashboards, web apps"
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Let's Talk"
-    [[params.servicePricing.tiers.features]]
-      text = "Everything you need"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "Unlimited pages"
-    [[params.servicePricing.tiers.features]]
-      text = "Advanced functionality"
-    [[params.servicePricing.tiers.features]]
-      text = "Priority support"
-
-[[params.servicePricing]]
-  code = "MAIL"
-  name = "fundaMAIL"
-  description = "Professional email at your own domain. No fluff, no hidden costs."
-
-  [[params.servicePricing.tiers]]
-    name = "Bronze"
-    price = "R79"
-    period = "/mo"
-    sub = "No contract. Cancel anytime."
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Get Started"
-    [[params.servicePricing.tiers.features]]
-      text = "2 email accounts"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "500 MB storage"
-    [[params.servicePricing.tiers.features]]
-      text = "1 GB bandwidth"
-    [[params.servicePricing.tiers.features]]
-      text = "Spam & virus protection"
-    [[params.servicePricing.tiers.features]]
-      text = "Webmail + mobile/desktop"
-    [[params.servicePricing.tiers.features]]
-      text = "Free SSL certificate"
-
-  [[params.servicePricing.tiers]]
-    name = "Silver"
-    price = "R149"
-    period = "/mo"
-    sub = "Most popular · No contract"
-    featured = true
-    ctaUrl = "#contact"
-    ctaText = "Get Started"
-    [[params.servicePricing.tiers.features]]
-      text = "5 email accounts"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "1 GB storage"
-    [[params.servicePricing.tiers.features]]
-      text = "2 GB bandwidth"
-    [[params.servicePricing.tiers.features]]
-      text = "Spam & virus protection"
-    [[params.servicePricing.tiers.features]]
-      text = "Webmail + mobile/desktop"
-    [[params.servicePricing.tiers.features]]
-      text = "Free SSL certificate"
-
-  [[params.servicePricing.tiers]]
-    name = "Gold"
-    price = "R249"
-    period = "/mo"
-    sub = "No contract. Cancel anytime."
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Get Started"
-    [[params.servicePricing.tiers.features]]
-      text = "Unlimited email accounts"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "2 GB storage"
-    [[params.servicePricing.tiers.features]]
-      text = "5 GB bandwidth"
-    [[params.servicePricing.tiers.features]]
-      text = "Spam & virus protection"
-    [[params.servicePricing.tiers.features]]
-      text = "Webmail + mobile/desktop"
-    [[params.servicePricing.tiers.features]]
-      text = "Free SSL certificate"
-
-  [[params.servicePricing.tiers]]
-    name = "Extra Mailbox"
-    price = "R29"
-    period = "/mo"
-    sub = "Add to any plan"
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Add Mailbox"
-    fullWidth = true
-    [[params.servicePricing.tiers.features]]
-      text = "1 additional email account"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "Adds to your existing plan"
-    [[params.servicePricing.tiers.features]]
-      text = "Set up within 24 hours"
-
-[[params.servicePricing]]
-  code = "DOMAIN"
-  name = "fundaDOMAIN"
-  description = "Your online identity starts with the right domain. Registered and managed."
-
-  [[params.servicePricing.tiers]]
-    name = ".co.za"
-    price = "R199"
-    period = "/yr"
-    sub = "South Africa's favourite"
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Register Now"
-    [[params.servicePricing.tiers.features]]
-      text = "1 year registration"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "DNS management"
-    [[params.servicePricing.tiers.features]]
-      text = "Free email forwarding"
-    [[params.servicePricing.tiers.features]]
-      text = "Auto-renewal"
-
-  [[params.servicePricing.tiers]]
-    name = ".com"
-    price = "R249"
-    period = "/yr"
-    sub = "Global reach"
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Register Now"
-    [[params.servicePricing.tiers.features]]
-      text = "1 year registration"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "DNS management"
-    [[params.servicePricing.tiers.features]]
-      text = "Free email forwarding"
-    [[params.servicePricing.tiers.features]]
-      text = "Auto-renewal"
-
-  [[params.servicePricing.tiers]]
-    name = "Managed SSL"
-    price = "R299"
-    period = "/yr"
-    sub = "Auto-renewing encryption"
-    featured = true
-    ctaUrl = "#contact"
-    ctaText = "Add SSL"
-    [[params.servicePricing.tiers.features]]
-      text = "Auto-renewing Let's Encrypt"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "We handle installation"
-    [[params.servicePricing.tiers.features]]
-      text = "Browser-trusted certificate"
-    [[params.servicePricing.tiers.features]]
-      text = "Peace of mind"
-
-[[params.servicePricing]]
-  code = "HOSTING"
-  name = "fundaHOSTING"
-  description = "Reliable hosting for websites and email. Simply managed, always online."
-
-  [[params.servicePricing.tiers]]
-    name = "Email Hosting"
-    price = "From R79"
-    period = "/mo"
-    sub = "Included with fundaMAIL"
-    featured = false
-    ctaUrl = "#contact"
-    ctaText = "Get Started"
-    [[params.servicePricing.tiers.features]]
-      text = "See fundaMAIL pricing"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "99.9% uptime"
-    [[params.servicePricing.tiers.features]]
-      text = "Spam & virus protection"
-    [[params.servicePricing.tiers.features]]
-      text = "Webmail access"
-
-  [[params.servicePricing.tiers]]
-    name = "Maintenance"
-    price = "R350"
-    period = "/mo"
-    sub = "Peace of mind"
-    featured = true
-    ctaUrl = "#contact"
-    ctaText = "Get Started"
-    [[params.servicePricing.tiers.features]]
-      text = "Backups & updates"
-      highlight = true
-    [[params.servicePricing.tiers.features]]
-      text = "Security monitoring"
-    [[params.servicePricing.tiers.features]]
-      text = "DNS management"
-    [[params.servicePricing.tiers.features]]
-      text = "Priority support"
+[[params.pricing]]
+  name = "Quick Start"
+  tagline = "Fast + Affordable"
+  product = "Turnkey Setup"
+  price = "From R79"
+  period = "/mo"
+  sub = "Get online fast. Pre-configured solutions for email & domains with minimal setup time."
+  featured = false
+  ctaUrl = "#contact"
+  ctaText = "Get Started"
+  [[params.pricing.features]]
+    text = "Same-day setup"
+    highlight = true
+  [[params.pricing.features]]
+    text = "Pre-built templates"
+  [[params.pricing.features]]
+    text = "One revision round"
+  [[params.pricing.features]]
+    text = "Email support"
+  [[params.pricing.features]]
+    text = "MAIL · DOMAIN · HOSTING packages"
