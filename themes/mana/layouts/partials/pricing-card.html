@@ -1,8 +1,9 @@
-<!-- Pricing Card partial — accepts a tier dict -->
+<!-- Pricing Card partial — accepts a tier dict with optional service code -->
 {{ $tier := . }}
+{{ $service := $tier.service | default "" }}
 <div class="pricing-card{{ if $tier.featured }} featured{{ end }}{{ if $tier.fullWidth }} pricing-card--full{{ end }}">
   <div class="pricing-name">
-    {{ if $tier.tagline }}<span class="pricing-tagline">{{ $tier.tagline }}</span>{{ end }}
+    {{ if $service }}<span class="pricing-service"><span class="pfx">funda</span>{{ $service }}</span>{{ end }}
     <span class="pricing-tier">{{ $tier.name }}</span>
   </div>
   <div class="pricing-amount">{{ $tier.price }}<small>{{ $tier.period }}</small></div>
