@@ -41,7 +41,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   heroPills = "Websites · Email · Domains · Hosting"
   heroCtaText = "Learn More"
   heroCtaUrl = "#faq"
-  heroCycles = ["WEB    ", "MAIL   ", "DOMAIN ", "HOSTING", "MENTALS"]
+  heroCycles = ["DOMAIN ", "MAIL   ", "WEB    ", "HOSTING"]
   heroRotateInterval = 2600   # ms between rotations (0 to disable)
 
   # Ticker — ambient marquee, pure CSS animation
@@ -198,9 +198,9 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 # Each service gets: a short code (suffix), display name, and description.
 
 [[params.services]]
-  code = "WEB"
-  name = "fundaWEB"
-  description = "Websites"
+  code = "DOMAIN"
+  name = "fundaDOMAIN"
+  description = "Your Online Identity"
 
 [[params.services]]
   code = "MAIL"
@@ -208,9 +208,9 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   description = "Professional Email"
 
 [[params.services]]
-  code = "DOMAIN"
-  name = "fundaDOMAIN"
-  description = "Your Online Identity"
+  code = "WEB"
+  name = "fundaWEB"
+  description = "Websites"
 
 [[params.services]]
   code = "HOSTING"
