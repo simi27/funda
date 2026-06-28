@@ -37,7 +37,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   author = "funda"
 
   # Hero
-  heroTagline = "Trusted by businesses across Africa and the USA."
+  heroTagline = "Everything starts with the fundamentals."
   heroPills = "Websites · Email · Domains · Hosting"
   heroCtaText = "Learn More"
   heroCtaUrl = "#faq"
