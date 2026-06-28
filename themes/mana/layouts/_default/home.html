@@ -189,6 +189,19 @@
   </div>
 </section>
 
+<script>
+  // FAQ accordion — only one open at a time
+  document.querySelectorAll('.contact-faq').forEach(container => {
+    container.addEventListener('toggle', e => {
+      if (e.target.open) {
+        container.querySelectorAll('details[open]').forEach(d => {
+          if (d !== e.target) d.open = false;
+        });
+      }
+    });
+  });
+</script>
+
 <!-- ═══════════════════════════════════════════════════════════
      TICKER — Strip scale (footer chrome)
      ═══════════════════════════════════════════════════════════ -->
