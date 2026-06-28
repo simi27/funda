@@ -33,11 +33,11 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 # ═══════════ Params — drives all page content ═══════════
 
 [params]
-  description = "Building the digital fundamentals for Africa. Professional email, domains, websites, and hosting — done properly."
+  description = "Professional online presence for businesses across Africa and the USA. Domain, email, websites, and hosting — the fundamentals, done properly."
   author = "funda"
 
   # Hero
-  heroTagline = "Everything starts with the fundamentals."
+  heroTagline = "Your domain. Your email. Your brand — across Africa and beyond."
   heroPills = "Websites · Email · Domains · Hosting"
   heroCtaText = "Learn More"
   heroCtaUrl = "#faq"
