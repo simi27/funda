@@ -64,6 +64,11 @@
     document.querySelectorAll('.pricing-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === code));
     document.querySelectorAll('.pricing-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === code));
   }
+
+  function goToPricing(code) {
+    switchPricingTab(code);
+    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+  }
 </script>
 
 <!-- ═══════════════════════════════════════════════════════════
