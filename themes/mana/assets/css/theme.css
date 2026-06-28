@@ -62,6 +62,32 @@
   --dur-slow:   380ms;
 }
 
+/* ═══════════ Dark Theme ═══════════ */
+[data-theme="dark"] {
+  --ink:        #E8E4DC;
+  --forest:     #4FD080;
+  --forest-deep:#3AB868;
+  --paper:      #0A1A12;
+  --mist:       #12261C;
+  --mute:       #7A8A7E;
+  --hair:       rgba(232,228,220,0.10);
+  --hair-strong:rgba(232,228,220,0.18);
+
+  --bg-primary:    var(--paper);
+  --bg-secondary:  #0E2419;
+  --bg-tertiary:   var(--mist);
+  --text-primary:  var(--ink);
+  --text-secondary:#B0ADA5;
+  --text-muted:    var(--mute);
+  --border-color:  var(--hair);
+  --border-strong: var(--hair-strong);
+
+  --accent:        var(--forest);
+  --accent-hover:  var(--forest-deep);
+  --accent-rgba-01: rgba(79,208,128,0.10);
+  --accent-rgba-02: rgba(79,208,128,0.20);
+}
+
 /* ── Reset ── */
 *, *::before, *::after {
   margin: 0;
