@@ -51,7 +51,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
   # Section labels (JetBrains Mono metadata text)
   railLabel = "Services"
-  pricingLabel = "Email Hosting — month to month, cancel anytime"
+  pricingLabel = "Email Hosting — month to month, cancel anytime. All prices in ZAR. USD equivalents on request — we serve across Africa and the USA."
   whyLabel = "The fundamentals, done properly"
   faqLabel = "The fundamentals — explained"
 
