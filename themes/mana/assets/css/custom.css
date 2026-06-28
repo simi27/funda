@@ -456,6 +456,13 @@
   margin-bottom: var(--s2);
 }
 
+.form-hint {
+  font-size: 13px;
+  color: var(--mute);
+  margin-bottom: var(--s2);
+  line-height: 1.5;
+}
+
 .form-checks {
   display: flex;
   flex-direction: column;
