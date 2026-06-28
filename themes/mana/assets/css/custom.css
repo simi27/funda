@@ -396,6 +396,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--s6);
   margin-top: var(--s4);
+  align-items: start;
 }
 
 /* ── Form ── */
@@ -443,7 +444,7 @@
   color: var(--mute);
   text-transform: uppercase;
   margin-bottom: -4px;
-  margin-top: var(--s2);
+  margin-top: 0;
 }
 
 .form-label ~ .form-label {
@@ -452,6 +453,7 @@
 
 .contact-info .form-label {
   margin-top: 0;
+  margin-bottom: var(--s2);
 }
 
 .form-checks {
