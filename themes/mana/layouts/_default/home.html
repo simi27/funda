@@ -197,13 +197,14 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 </script>
 
-<!-- Hero rotator — applyState() drives cards -->
+<!-- Hero rotator — applyState() drives cards + pricing tabs -->
 <script>
   const cycle = [{{ range $i, $w := site.Params.heroCycles }}{{ if $i }},{{ end }}"{{ $w }}"{{ end }}];
   const suffixWindow = document.getElementById('suffixWindow');
   const suffixText = document.getElementById('suffixText');
   const cardsEl = document.getElementById('cards');
   let idx = 0;
+  let paused = false;
 
   function setWidth(word) {
     suffixWindow.style.width = word.length + 'ch';
@@ -216,10 +217,16 @@
         el.classList.toggle('active', el.dataset.word === word);
       });
     }
+    // Sync pricing tab: MENTALS → WEB, otherwise use the word directly
+    const tabCode = word === 'MENTALS' ? 'WEB' : word;
+    if (typeof switchPricingTab === 'function') {
+      switchPricingTab(tabCode);
+    }
   }
   applyState(cycle[idx]);
 
   function advance() {
+    if (paused) return;
     const next = (idx + 1) % cycle.length;
     const nextWord = cycle[next];
     suffixText.classList.add('out');
@@ -234,6 +241,13 @@
         requestAnimationFrame(() => { suffixText.classList.remove('in-start'); });
       });
     }, reduceMotion ? 0 : 360);
+  }
+
+  // Pause rotation when user hovers over pricing section
+  const pricingSection = document.getElementById('pricing');
+  if (pricingSection) {
+    pricingSection.addEventListener('mouseenter', () => { paused = true; });
+    pricingSection.addEventListener('mouseleave', () => { paused = false; });
   }
 
   {{ $interval := site.Params.heroRotateInterval | default 2600 }}
