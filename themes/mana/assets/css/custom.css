@@ -410,6 +410,16 @@
   width: 100%;
 }
 
+.form-phone {
+  display: flex;
+  gap: var(--s2);
+}
+
+.form-country {
+  width: 120px;
+  flex-shrink: 0;
+}
+
 .form-input {
   width: 100%;
   background: var(--bg-secondary);
