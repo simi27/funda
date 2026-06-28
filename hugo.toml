@@ -33,11 +33,11 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 # ═══════════ Params — drives all page content ═══════════
 
 [params]
-  description = "Professional online presence for businesses across Africa and the USA. Domain, email, websites, and hosting — the fundamentals, done properly."
+  description = "Professional online presence for businesses. Trusted by clients across Africa and the USA. Domains, email, websites, and hosting — the fundamentals, done properly. Africa HQ: South Africa."
   author = "funda"
 
   # Hero
-  heroTagline = "Your domain. Your email. Your brand — across Africa and beyond."
+  heroTagline = "Trusted by businesses across Africa and the USA."
   heroPills = "Websites · Email · Domains · Hosting"
   heroCtaText = "Learn More"
   heroCtaUrl = "#faq"
@@ -51,7 +51,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
   # Section labels (JetBrains Mono metadata text)
   railLabel = "Services"
-  pricingLabel = "Email Hosting — month to month, cancel anytime. All prices in ZAR. USD equivalents on request — we serve across Africa and the USA."
+  pricingLabel = "Email Hosting — month to month, cancel anytime. All prices in ZAR. USD equivalents on request. Africa HQ: South Africa, with clients across the continent and the USA."
   whyLabel = "The fundamentals, done properly"
   faqLabel = "The fundamentals — explained"
 
@@ -142,7 +142,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
   [[params.faq]]
     question = "How is funda different?"
-    answer = "We focus on the fundamentals — done properly. Professional email at your domain, transparent pricing, no upsells, and local support. We keep it simple so you can get on with business."
+    answer = "We focus on the fundamentals — done properly. Professional email at your domain, transparent pricing, no upsells, and support when you need it. We keep it simple so you can get on with business — wherever you are in Africa or the USA."
 
   # Social / contact
   [params.social]
@@ -155,7 +155,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
 
   # Footer
   footerText = "Everything starts with the fundamentals."
-  footerLocation = "South Africa 🇿🇦"
+  footerLocation = "Serving Africa & the USA"
 
 # ═══════════ Services — drives hero rotator, rail, cards ═══════════
 # These are the LIVE services. Add new ones only when they actually ship.
