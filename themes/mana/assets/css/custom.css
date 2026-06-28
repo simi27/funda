@@ -416,8 +416,11 @@
 }
 
 .form-country {
-  width: 120px;
+  width: 100px;
   flex-shrink: 0;
+  font-size: 13px;
+  padding-left: var(--s2);
+  padding-right: var(--s1);
 }
 
 .form-input {
