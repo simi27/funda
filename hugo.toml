@@ -115,9 +115,9 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
     description = "Access your email on your phone, laptop, or via webmail — anywhere."
 
   [[params.why]]
-    icon = "🇿🇦"
-    title = "South African Support"
-    description = "Local support when you need it. No chatbots, just real people."
+    icon = "🌍"
+    title = "Pan-African Reach"
+    description = "Africa HQ in South Africa, with clients across Tanzania, Kenya, Malawi, Nigeria, and the USA."
 
   # FAQ
   [[params.faq]]
