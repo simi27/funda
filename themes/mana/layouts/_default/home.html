@@ -224,8 +224,9 @@
 
   function applyState(word) {
     if (cardsEl) {
+      const clean = word.trim();
       cardsEl.querySelectorAll('.card').forEach(el => {
-        el.classList.toggle('active', el.dataset.word === word);
+        el.classList.toggle('active', el.dataset.word === clean);
       });
     }
     // Sync pricing tab: MENTALS → WEB, otherwise use the word directly
