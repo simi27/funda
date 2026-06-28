@@ -4,12 +4,12 @@
 <script>
   (function() {
     try {
-      var theme = localStorage.getItem('funda-theme') || 'light';
+      var theme = localStorage.getItem('funda-theme') || 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (meta) meta.setAttribute('content', theme === 'dark' ? '#0A1A12' : '#F6F2E9');
     } catch (e) {
-      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   })();
   function toggleTheme() {
