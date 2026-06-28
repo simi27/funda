@@ -212,7 +212,7 @@
       <div class="contact-faq" id="faq">
         <h4 class="contact-country-label">FAQ</h4>
         {{ range site.Params.faq }}
-        <details>
+        <details open>
           <summary>{{ .question }}</summary>
           <p>{{ .answer }}</p>
         </details>
@@ -222,19 +222,6 @@
 
   </div>
 </section>
-
-<script>
-  // FAQ accordion — only one open at a time
-  document.querySelectorAll('.contact-faq').forEach(container => {
-    container.addEventListener('toggle', e => {
-      if (e.target.open) {
-        container.querySelectorAll('details[open]').forEach(d => {
-          if (d !== e.target) d.open = false;
-        });
-      }
-    });
-  });
-</script>
 
 <!-- ═══════════════════════════════════════════════════════════
      TICKER — Strip scale (footer chrome)
