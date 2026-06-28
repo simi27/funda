@@ -157,6 +157,42 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   footerText = "Everything starts with the fundamentals."
   footerLocation = "Serving Africa & the USA"
 
+  # Geo-currency — IP detection maps country to local currency
+  [[params.currencies]]
+    code = "ZAR"
+    symbol = "R"
+    name = "South African Rand"
+    rate = 1.0
+    countries = ["ZA", "LS", "SZ", "NA"]
+
+  [[params.currencies]]
+    code = "NGN"
+    symbol = "₦"
+    name = "Nigerian Naira"
+    rate = 84.0
+    countries = ["NG"]
+
+  [[params.currencies]]
+    code = "MWK"
+    symbol = "MK"
+    name = "Malawian Kwacha"
+    rate = 98.0
+    countries = ["MW"]
+
+  [[params.currencies]]
+    code = "KES"
+    symbol = "KSh"
+    name = "Kenyan Shilling"
+    rate = 7.5
+    countries = ["KE"]
+
+  [[params.currencies]]
+    code = "USD"
+    symbol = "$"
+    name = "US Dollar"
+    rate = 0.055
+    countries = ["US", "default"]
+
 # ═══════════ Services — drives hero rotator, rail, cards ═══════════
 # These are the LIVE services. Add new ones only when they actually ship.
 # Each service gets: a short code (suffix), display name, and description.
@@ -258,6 +294,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Bronze"
     price = "R79"
+    priceZAR = "79"
     period = "/mo"
     sub = "No contract. Cancel anytime."
     featured = false
@@ -280,6 +317,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Silver"
     price = "R149"
+    priceZAR = "149"
     period = "/mo"
     sub = "Most popular · No contract"
     featured = true
@@ -302,6 +340,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Gold"
     price = "R249"
+    priceZAR = "249"
     period = "/mo"
     sub = "No contract. Cancel anytime."
     featured = false
@@ -324,6 +363,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Extra Mailbox"
     price = "R29"
+    priceZAR = "29"
     period = "/mo"
     sub = "Add to any plan"
     featured = false
@@ -346,6 +386,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Country Domains"
     price = "From R199"
+    priceZAR = "199"
     period = "/yr"
     sub = ".co.za · .tz · .ke · .ng · .mw"
     featured = false
@@ -364,6 +405,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = ".com"
     price = "R249"
+    priceZAR = "249"
     period = "/yr"
     sub = "Global reach"
     featured = false
@@ -382,6 +424,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Managed SSL"
     price = "R299"
+    priceZAR = "299"
     period = "/yr"
     sub = "Auto-renewing encryption"
     featured = true
@@ -405,6 +448,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Email Hosting"
     price = "From R79"
+    priceZAR = "79"
     period = "/mo"
     sub = "Included with fundaMAIL"
     featured = false
@@ -423,6 +467,7 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   [[params.servicePricing.tiers]]
     name = "Maintenance"
     price = "R350"
+    priceZAR = "350"
     period = "/mo"
     sub = "Peace of mind"
     featured = true
