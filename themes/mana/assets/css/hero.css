@@ -28,8 +28,8 @@
   display: inline-block;
   overflow: hidden;
   height: 1em;
+  width: 8ch;
   margin-left: 0.08em;
-  transition: width var(--dur-slow) var(--ease-standard);
   vertical-align: bottom;
 }
 
