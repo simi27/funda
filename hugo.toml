@@ -39,8 +39,8 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   # Hero
   heroTagline = "Everything starts with the fundamentals."
   heroPills = "Websites · Email · Domains · Hosting"
-  heroCtaText = "Get Started"
-  heroCtaUrl = "#contact"
+  heroCtaText = "Learn More"
+  heroCtaUrl = "#faq"
   heroCycles = ["MENTALS", "WEB", "MAIL", "DOMAIN", "HOSTING"]
   heroRotateInterval = 2600   # ms between rotations (0 to disable)
 
