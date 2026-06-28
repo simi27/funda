@@ -4,9 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(246,242,233,0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--bg-primary);
   border-bottom: 1px solid var(--hair);
 }
 

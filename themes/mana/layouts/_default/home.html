@@ -236,19 +236,6 @@
      ═══════════════════════════════════════════════════════════ -->
 <script>
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Theme toggle
-  (function() {
-    const stored = localStorage.getItem('funda-theme');
-    const theme = stored || 'light';
-    document.documentElement.setAttribute('data-theme', theme);
-  })();
-  function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('funda-theme', next);
-  }
 </script>
 
 <!-- Hero rotator — applyState() drives cards + pricing tabs -->
