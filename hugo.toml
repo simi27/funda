@@ -56,8 +56,8 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap', 'section']
   faqLabel = "The fundamentals — explained"
 
   # CTA / Contact
-  ctaHeading = "Let's Build Together"
-  ctaSubheading = "Ready to get online? Fill out the form and we'll have you set up within 24 hours."
+  ctaHeading = "Get to know us, Share Your Ideas, Let's Connect"
+  ctaSubheading = "No commitment. No payment. Just a conversation about what you need — we'll align on the right solution and send you a clear proposal."
   ctaEmail = "hello@funda.africa"
   ctaPhone = "+27 65 969 3995"
   ctaWhatsApp = "27659693995"

@@ -99,6 +99,8 @@
     <form class="contact-form" name="contact" method="POST" netlify data-netlify="true">
       <input type="hidden" name="form-name" value="contact">
 
+      <p class="form-label">Your details</p>
+
       <div class="form-group">
         <input type="text" name="name" placeholder="Your Name" required class="form-input">
       </div>
@@ -108,23 +110,27 @@
       </div>
 
       <div class="form-group">
-        <input type="text" name="phone" placeholder="Phone Number" class="form-input">
+        <input type="text" name="phone" placeholder="Phone Number" required class="form-input">
+      </div>
+
+      <p class="form-label">I'm interested in (select all that apply)</p>
+
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" name="services" value="fundaWEB"> <span>fundaWEB — Websites</span></label>
+        <label class="form-check"><input type="checkbox" name="services" value="fundaMAIL"> <span>fundaMAIL — Professional Email</span></label>
+        <label class="form-check"><input type="checkbox" name="services" value="fundaDOMAIN"> <span>fundaDOMAIN — Domain Registration</span></label>
+        <label class="form-check"><input type="checkbox" name="services" value="fundaHOSTING"> <span>fundaHOSTING — Hosting & Maintenance</span></label>
       </div>
 
       <div class="form-group">
-        <select name="plan" class="form-input">
-          <option value="">Select a plan (optional)</option>
-          <option value="Bronze">fundaMAIL Bronze — R79/mo</option>
-          <option value="Silver">fundaMAIL Silver — R149/mo</option>
-          <option value="Gold">fundaMAIL Gold — R249/mo</option>
-        </select>
+        <textarea name="message" rows="3" placeholder="Tell us about your project or ideas..." class="form-input form-textarea"></textarea>
       </div>
 
-      <div class="form-group">
-        <textarea name="message" rows="4" placeholder="Tell us about your needs" class="form-input form-textarea"></textarea>
+      <div class="form-note">
+        <p>No payment required here. We'll review your request, reach out within 24 hours for an alignment call, and send you a clear proposal before anything moves forward.</p>
       </div>
 
-      <button type="submit" class="form-submit">Send Message</button>
+      <button type="submit" class="form-submit">Request a Call Back</button>
     </form>
 
     <!-- Contact Info -->
