@@ -3,19 +3,19 @@
 .cards-section {
   max-width: 920px;
   margin: 0 auto;
-  padding: var(--s2) var(--s4) var(--s8);
+  padding: 0 var(--s4) var(--s3);
 }
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--s3);
+  gap: var(--s2);
 }
 
 .card {
   border: 1px solid var(--hair);
   border-radius: var(--r1);
-  padding: var(--s3);
+  padding: var(--s2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +36,6 @@
 
 .card-logo {
   width: 100%;
-  padding: var(--s2);
 }
 
 .card-logo svg {
