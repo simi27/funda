@@ -1,7 +1,7 @@
 /* ═══════════ Service Cards — grid, subtle lift on active ═══════════ */
 
 .cards-section {
-  max-width: 920px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 var(--s4) var(--s3);
 }
