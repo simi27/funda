@@ -6,13 +6,13 @@
   letter-spacing: 0.12em;
   color: var(--mute);
   text-transform: uppercase;
-  max-width: 560px;
+  max-width: 100%;
   margin: 0 auto;
   padding: var(--s2) var(--s4) var(--s1);
 }
 
 .rail {
-  max-width: 480px;
+  max-width: 100%;
   margin: 0 auto;
   padding: var(--s2) var(--s4) var(--s6);
   display: flex;

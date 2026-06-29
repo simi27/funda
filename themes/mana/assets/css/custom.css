@@ -114,7 +114,7 @@
   font-size: 14px;
   color: var(--mute);
   margin-bottom: var(--s4);
-  max-width: 600px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -314,7 +314,7 @@
 
 /* ── FAQ ── */
 .faq-section {
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto;
   padding: var(--s7) var(--s4);
 }
